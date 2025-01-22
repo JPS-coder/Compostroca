@@ -6,8 +6,9 @@ function AppRoutes() {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={ <PageBase /> } />
+                <Route path='/' element={ <PageBase /> } >
                     <Route index element={ <Home /> } />
+                </Route>
             </Routes>
         </BrowserRouter>
     )
