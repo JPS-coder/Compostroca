@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
-import styles from './hearder.module.css';
-import logo from '../../assets/compostroca_logo.png';
+import styles from './header.module.css';
+import logo from '../../assets/logotipo.svg';
 import { useState } from 'react';
 
 
