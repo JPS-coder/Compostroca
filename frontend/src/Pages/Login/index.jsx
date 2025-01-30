@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import styles from "./registerLogin.module.css";
+import styles from "./Login.module.css";
 
 function Login() {
     const [email, setEMail] = useState("");
@@ -15,7 +15,7 @@ function Login() {
             console.log("Login bem-sucedido:", response.dat);
             navigate("/");
         } catch (error) {
-            console.error("Erro no login", error.response?.data || error.message):
+            console.error("Erro no login", error.response?.data || error.message)
         }
     };
 
