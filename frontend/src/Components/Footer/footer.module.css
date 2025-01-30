@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .footer {
+=======
+.footer{
+>>>>>>> 6e889b6877fc8975a36929568fbac7f7ba4f4e35
     width: 100%;
     height: 1.5rem;
     font-weight: bold;
@@ -8,17 +12,30 @@
     justify-content: center;
     position: fixed;
     bottom: 0;
+<<<<<<< HEAD
    left: 0;
 }
 
 @media (max-width: 768px) {
     .footer {
+=======
+    left: 0;
+}
+
+@media (max-widht: 768px){
+    .footer{
+>>>>>>> 6e889b6877fc8975a36929568fbac7f7ba4f4e35
         font-size: 1rem;
     }
 }
 
+<<<<<<< HEAD
 @media (max-width: 480px) {
     .footer {
+=======
+@media (max-width: 480px){
+    .footer{
+>>>>>>> 6e889b6877fc8975a36929568fbac7f7ba4f4e35
         font-size: 0.75rem;
     }
 }
