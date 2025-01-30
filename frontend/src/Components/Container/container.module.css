@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 .container {
     position: relative;
     width: 100%;
-=======
-.container{
-    position: relative;
-    width: 100%;
-    min-height: calc(100vh -rem - 1.5rem);
->>>>>>> 6e889b6877fc8975a36929568fbac7f7ba4f4e35
     margin-top: 5rem;
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-<<<<<<< HEAD
     padding-top: 1rem;
     gap: 1rem;
     overflow-x: hidden;
@@ -21,14 +13,6 @@
 
 .container::before {
     content: '';
-=======
-    padding-top: 0.3rem;
-    gap: 1rem;
-}
-
-.container::before{
-    content:'';
->>>>>>> 6e889b6877fc8975a36929568fbac7f7ba4f4e35
     position: absolute;
     top: 0;
     left: 0;
@@ -37,16 +21,11 @@
     z-index: -1;
 }
 
-<<<<<<< HEAD
 .container h1 {
-=======
-.container h1{
->>>>>>> 6e889b6877fc8975a36929568fbac7f7ba4f4e35
     font-size: 1.3rem;
     text-align: center;
 }
 
-<<<<<<< HEAD
 .container h2 {
     font-size: 1.2rem;
 }
@@ -64,8 +43,3 @@
 .container a:hover {
     color: black;
 }
-=======
-.container h2{
-    font-size: 1.2rem;
-}
->>>>>>> 6e889b6877fc8975a36929568fbac7f7ba4f4e35
