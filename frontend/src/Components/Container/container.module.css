@@ -8,6 +8,7 @@
     align-items: center;
     padding-top: 1rem;
     gap: 1rem;
+    color: var(--colorText);
     overflow-x: hidden;
 }
 
@@ -22,12 +23,12 @@
 }
 
 .container h1 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     text-align: center;
 }
 
 .container h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .container a {
@@ -42,4 +43,15 @@
 
 .container a:hover {
     color: black;
+}
+
+button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--colorText);
+    border: none;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 500;
 }

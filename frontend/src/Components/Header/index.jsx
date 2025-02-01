@@ -8,10 +8,15 @@ function Header() {
     const toggleMenu = () => {
         setShowMenu (!showMenu)
     };
-    
+
+      
 const location = useLocation();
-const noMenuPages = ['/', '/RegisterLogin'];
-const isLogoOnly = noMenuPages.includes(location.pathname)
+
+const noMenuPages = ['/', '/login', '/register'];
+
+const isLogoOnly = noMenuPages.some(path => location.pathname.startsWith(path));
+
+//const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase().replace(/\/$/, ''));
 
     return (
         <header className={styles.header}>
