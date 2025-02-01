@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import styles from "./Login.module.css";
+import styles from "./LoginRegister.module.css";
 import { FaAt, FaLock } from 'react-icons/fa'
 
 
@@ -12,6 +12,7 @@ function Login() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
+        
         try {
             const response = await axios.post("http://localhost:3000/auth/login", {email, password})
             console.log("Login bem-sucedido:", response.data);
@@ -22,7 +23,7 @@ function Login() {
     };
 
     return (
-        <div className={styles.screenLogin}>
+        <div className={styles.screenLoginRegister}>
             <h2>Entrar</h2>
             <form onSubmit={handleLogin}>
                 <div className={styles.inputForm}>
@@ -39,20 +40,20 @@ function Login() {
                 <div className={styles.inputForm}>
                     <FaLock className={styles.icon} />
                     <input 
-                    type="password" 
-                    value={password} 
-                    onChange={(e) => setPassword(e. target.value)} 
-                    placeholder="Digite sua senha"
-                    required
+                        type="password" 
+                        value={password} 
+                        onChange={(e) => setPassword(e. target.value)} 
+                        placeholder="Digite sua senha"
+                        required
                     />
                 </div>
-                <p className={styles.senha}> Esqueci a Senha</p>
+                <p className={styles.msg}> Esqueci a Senha</p>
                 
                 <button type="submit">Acessar</button>            
             </form>
 
             <p>
-                Ainda não possui uma conta?<Link to ="/register" className={styles.linkReg}>Crie Agora</Link>
+                Ainda não possui uma conta?<Link to ="/register" className={styles.link}>Crie Agora</Link>
             </p>
 
         </div>
