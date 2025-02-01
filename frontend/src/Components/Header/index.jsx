@@ -14,7 +14,7 @@ const location = useLocation();
 
 const noMenuPages = ['/', '/login', '/register'];
 
-const isLogoOnly = noMenuPages.some(path => location.pathname.startsWith(path));
+const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
 
 //const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase().replace(/\/$/, ''));
 
@@ -27,7 +27,6 @@ const isLogoOnly = noMenuPages.some(path => location.pathname.startsWith(path));
             
                 <nav
                 className={`${styles.menuSandwich} ${ showMenu ? styles.show : ''}`}
-                onClick={toggleMenu}
                 >
                     <Link to="/">Home</Link>
                     <Link to="/RegisterLogin">Editar Dados</Link>

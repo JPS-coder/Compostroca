@@ -42,7 +42,8 @@
 }
 
 .container a:hover {
-    color: black;
+    color: var(--shadow);
+    
 }
 
 button {
