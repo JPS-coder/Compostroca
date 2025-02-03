@@ -35,13 +35,21 @@ const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
                     <Link to="/Info">Informaçoes</Link>   
                 </nav>
       
-            <div
+            {/*<div
              className={styles.menuButton}
              onClick={toggleMenu}>
                 <span className={styles.linha}></span>
                 <span className={styles.linha}></span>
                 <span className={styles.linha}></span>
+            </div>*/}
+            <div
+                className={`${styles.menuButton} ${showMenu ? styles.close : ''}`}
+                onClick={toggleMenu}>
+                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
+                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
+                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
             </div>
+
         </>
     )}
 

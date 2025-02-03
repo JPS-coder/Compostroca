@@ -60,7 +60,7 @@
 
 .menuButton {
     width: 2rem;
-    height: 2rem;
+    height: 1.8rem;
     position: absolute;
     cursor:pointer;
     display: flex;
@@ -71,10 +71,28 @@
 }
 
 .linha {
-    width: 100%;
+    width: 2rem;
     height: 2px;
     background-color: black;
     border-radius: 2px;
+    transition: 0.3s;
+}
+
+.close .linha:nth-child(1) {
+    transform: rotate(50deg);
+    position: relative;
+    top: 8px;
+    
+}
+
+.close .linha:nth-child(2) {
+    opacity: 0;
+}
+
+.close .linha:nth-child(3) {
+    transform: rotate(-50deg);
+    position: relative;
+    top: -8px;
 }
 
 
