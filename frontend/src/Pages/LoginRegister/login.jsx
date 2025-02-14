@@ -53,7 +53,7 @@ function Login() {
             </form>
 
             <p>
-                Ainda não possui uma conta?<Link to ="/register" className={styles.link}>Crie Agora</Link>
+                Ainda não possui uma conta?<Link to ="/registerNewUser" className={styles.link}>Crie Agora</Link>
             </p>
 
         </div>

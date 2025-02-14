@@ -1,102 +1,100 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
 import styles from './LoginRegister.module.css';
-import { FaAt, FaLock } from 'react-icons/fa';
-import Messages from '../../Components/Messages';
+//import { useMessage } from "../../Components/Messages/index"
+import Messages from '../../Components/Messages/index';
+
 
 function Register() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfrimPassword] = useState("");
-    const [errorMessage, setErrorMessage] = useState('');
-    const [showMessage, setShowMessage] = useState(false)
-    const navigate = useNavigate();
+    const [name, setName] = useState("");
+    const [address, setAddress] = useState("");
+    const [phone, setPhone] = useState("");
+    //const { MessageComponent, showMessage } = useMessage();
+    //const [modalVisible, setModalVisible] = useState(false)
+    const [message, setMensagem] = useState(null)
+    const [type, setType] = useState(null)
+
 
     const handleRegister = async (e) => {
         e.preventDefault();
 
-        if (password !== confirmPassword) {
-            setErrorMessage('As senhas não coincidem!');
-            return;
+        setMensagem('Cadastro realizado com sucesso!')
+        setType('sucess')
+        //const cadastroSimulado = true;
+
+        //if (cadastroSimulado) {
+        //   setModalVisible(true)
+           //console.log("Exibindo mensagem de cadastro");
+           //showMessage("register", "Cadastro realizado com sucesso!");
         }
-        
-        try {
-            const response = await axios.post('http://localhost:3000/auth/register', { email, password });
-            console.log('Cadastro realizado', response.data);
-
-            //adicionado
-            // exibe mensagem de sucesso
-            setShowMessage(true);
-
-            setTimeout(() => {
-                setShowMessage(false);
-                navigate('/');
-            }, 3000)
-
-            //navigate('/');
-        } catch (error) {
-            console.error ('Erro ao cadastrar:', error.response?.data || error.message);
-            setErrorMessage('Erro no cadastro.Tente novamente.');
-        }
-    };
 
     return (
-        <div className={styles.screenLoginRegister}>
-            <h2>Novo Usuário</h2>
+        
+        <div className={`${styles.screenLoginRegister} ${styles.cad}`}>
+            <Messages message={message} type={type} />
+            <h2 className={styles.title}>Cadastro</h2>
             <form onSubmit={handleRegister}>
                 <div className={styles.inputForm}>
-                    <FaAt className={styles.icon} />
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder='Digite seu email'
-                        required
-                    />
+                    <div className={styles.labelInput}>
+                        <label>
+                            Nome:
+                        </label>
+                        <input
+                            type="text"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                        />
+                    </div>
+                   
                 </div>
 
                 <div className={styles.inputForm}>
-                    <FaLock className={styles.icon} />
-                        <input 
-                            type="password" 
-                            value={password} 
-                            onChange={(e) => setPassword(e. target.value)} 
-                            placeholder="Digite sua senha"
-                            required
-                        />
+                        <div className={styles.labelInput}>
+                            <label>
+                                Endereço:
+                            </label>
+                            <input
+                                type="text"
+                                value={address}
+                                onChange={(e) => setAddress(e. target.value)}
+                                required
+                            />
+                        </div>
+                       
                 </div>
 
                 <div className={styles.inputForm}>
-                    <FaLock className={styles.icon} />
-                        <input 
-                            type="password" 
-                            value={confirmPassword} 
-                            onChange={(e) => setConfrimPassword(e. target.value)} 
-                            placeholder="Repita a senha"
+                    <div className={styles.labelInput}>
+                        <label>
+                            Telefone:
+                        </label>
+                        <input
+                            type="tel"
+                            value={phone}
+                            onChange={(e) => setPhone(e. target.value)}
                             required
                         />
+                    </div>
+                    
                 </div>
-                {errorMessage && <p className={styles.msg}>{errorMessage}</p>}
-                
-                <button type='submit'>Registrar</button>
+
+                <button className={styles.cad} type='submit'>Enviar</button>
             </form>
 
-            <p>
-                Já possui uma conta? <Link to ="/login" className={styles.link}>Faça Login</Link>
-            </p>
-
-            {/** exibir modal quando showmessage for true */}
-            {showMessage && (
-                <Messages
-                    type="newUser"
-                    message="Obrigado por se juntar à"
-                    onClose={() => setShowMessage(false)}
-                />
-            )}
+           
+            {/*exibir modal quando showmessage for true 
+            {modalVisible && (
+                <div className={styles.modal}>
+                    <div className={styles.modalContent}>
+                        <h3>Cadastro realizado com sucesso!</h3>
+                        <p>Muito Obrigado!</p>
+                        <button onClick={() => setModalVisible(false)}></button>
+                    </div>
+                </div>
+            )}*/}
 
         </div>
-    )
-}
+    );
+};
 
 export default Register;

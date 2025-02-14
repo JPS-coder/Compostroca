@@ -3,6 +3,7 @@
     height: 5rem;
     color: var(--colortext);
     display: flex;
+    position: fixed;
     align-items: center;
     justify-content: space-between;
     position: fixed;
@@ -22,13 +23,12 @@
     margin-left: 2rem;
 }
 
-
 .menuSandwich {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 5rem;
-    right: 1rem;
+    right: 4rem;
     background: white;
     width: 12rem;
     padding: 1rem;
@@ -39,6 +39,7 @@
 
 .menuSandwich.show {
     display: flex;
+    
 }
 
 .menuSandwich a {
@@ -67,6 +68,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding: 0 1REM;
     right: 4rem;
 }
 

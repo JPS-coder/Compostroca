@@ -12,7 +12,7 @@ function Header() {
       
 const location = useLocation();
 
-const noMenuPages = ['/', '/login', '/register'];
+const noMenuPages = ['/', '/login', '/registerNewUser'];
 
 const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
 
@@ -21,7 +21,13 @@ const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
     return (
         <header className={styles.header}>
             <div className={styles.img}><img className={isLogoOnly ? styles.logoCenter : styles.logo} src={logo} alt='Logotipo compostroca'/></div>
-            
+            <div
+                className={`${styles.menuButton} ${showMenu ? styles.close : ''}`}
+                onClick={toggleMenu}>
+                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
+                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
+                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
+            </div>
             {!isLogoOnly && (
                 <>
             
@@ -42,13 +48,7 @@ const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
                 <span className={styles.linha}></span>
                 <span className={styles.linha}></span>
             </div>*/}
-            <div
-                className={`${styles.menuButton} ${showMenu ? styles.close : ''}`}
-                onClick={toggleMenu}>
-                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
-                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
-                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
-            </div>
+           
 
         </>
     )}

@@ -47,8 +47,9 @@
 }
 
 button {
-    width: 100%;
+    width: 60%;
     padding: 0.5rem;
+    margin: auto;
     background-color: var(--colorText);
     border: none;
     border-radius: 1.25rem;
