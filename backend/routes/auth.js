@@ -14,13 +14,13 @@ router.post('/login', async (req, res) => {
             [email, password]
         );
 
-        if (result.rows.lenght >0) {
+        if (result.rows.length >0) {
             res.status(200).json({ message: 'Login bem sucedido', user: result.rows[0] });
         } else {
             res.status(400).json({ message: 'Credenciais inválidas' });
         }
     } catch (error) {
-        console.error(500).send('Erro ao tentar fazer login');
+        res.status(500).send('Erro ao tentar fazer login');
     }
 });
 

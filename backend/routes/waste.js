@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Definiçao das rotas de resíduos
 router.post('/waste', async (req, res) => {
-    const { type, description } = res.body;
+    const { type, description } = req.body;
     try {
         const result = await pool.query(
             'INSERT INTO waste (type, description) VALUES ($1, $2) RETURNING *',
