@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import axios from "axios";
 import styles from "./LoginRegister.module.css";
 import { FaAt, FaLock } from 'react-icons/fa'
 
@@ -12,14 +11,19 @@ function Login() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        
-        try {
+
+       // simulacao tempo de resposta api
+       setTimeout(() => {
+        console.log("Login bem-sucedido (simulação)");
+        navigate("/");  // Redireciona para a página "home"
+    }, 1000);
+       /* try {
             const response = await axios.post("http://localhost:3000/auth/login", {email, password})
             console.log("Login bem-sucedido:", response.data);
             navigate("/home");
         } catch (error) {
             console.error("Erro no login", error.response?.data || error.message)
-        }
+        }*/
     };
 
     return (
@@ -49,11 +53,12 @@ function Login() {
                 </div>
                 <p className={styles.msg}> Esqueci a Senha</p>
                 
-                <button type="submit">Acessar</button>            
+                <button type="submit">Acessar</button>  
+                       
             </form>
 
             <p>
-                Ainda não possui uma conta?<Link to ="/registerNewUser" className={styles.link}>Crie Agora</Link>
+                Ainda não possui uma conta?<Link to ="/registernewuser" className={styles.link}>Crie Agora</Link>
             </p>
 
         </div>

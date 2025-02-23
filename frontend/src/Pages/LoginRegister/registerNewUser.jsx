@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
 import styles from './LoginRegister.module.css';
 import { FaAt, FaLock } from 'react-icons/fa';
 import Messages from '../../Components/Messages';
+
 
 function RegisterNewUser() {
     const [email, setEmail] = useState("");
@@ -12,10 +12,13 @@ function RegisterNewUser() {
     const [errorMessage, setErrorMessage] = useState('');
     const [showMessage, setShowMessage] = useState(false)
     const navigate = useNavigate();
+    const [message, setMessage] = useState(null);
+    const [type, setType] = useState(null)
 
     const handleRegisterNewUser = async (e) => {
         e.preventDefault();
 
+        /*
         if (password !== confirmPassword) {
             setErrorMessage('As senhas não coincidem!');
             return;
@@ -37,12 +40,29 @@ function RegisterNewUser() {
             //navigate('/');
         } catch (error) {
             console.error ('Erro ao cadastrar:', error.response?.data || error.message);
-            setErrorMessage('Erro no cadastro.Tente novamente.');
-        }
+            setErrorMessage('Erro no cadastro. Tente novamente.');
+        }*/
+            setMessage(
+                <>
+                    <p><Link to='/register'>Clique Aqui para</Link></p>
+                    <p>completar seu</p>
+                    <p>cadastro e </p>
+                    Explore o que <br /> preparamos para <br /> você.
+                </>)
+            setType('success');
+            setRedirectTo('/');
+            setModalVisible(true);
     };
+    
 
     return (
         <div className={styles.screenLoginRegister}>
+            <Messages
+                message={message}
+                type={type}
+                onClose={() => setMessage(null)}
+                extraMessage={<>Obrigado por se <br /> juntar à </>}
+            />
             <h2>Novo Usuário</h2>
             <form onSubmit={handleRegisterNewUser}>
                 <div className={styles.inputForm}>

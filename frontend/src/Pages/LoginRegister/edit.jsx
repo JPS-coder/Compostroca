@@ -14,11 +14,23 @@ function Edit() {
     const handleEdit = async (e) => {
         e.preventDefault();
 
+        // simular tempo de resposta ddo servidor
+        setMessage(
+            <>
+                Dados salvos <br/>com sucesso.
+            </>)
+        setType('success');
+        setRedirectTo('/');
+        setModalVisible(true);
     }
 
     return (
         <div className={`${styles.screenLoginRegister} ${styles.cad} ${styles.edit}`}>
-            <Messages message={message} type={type} />
+            <Messages
+                message={message}
+                type={type}
+                onClose={() => setMessage(null)}
+            />
             <h2 className={styles.title}>Editar Dados</h2>
             <form onSubmit={handleEdit}>
                 <div className={styles.inputForm}>

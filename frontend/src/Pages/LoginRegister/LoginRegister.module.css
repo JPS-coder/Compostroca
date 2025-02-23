@@ -1,7 +1,5 @@
 .screenLoginRegister {
-    width: 18rem;
-    top: 5rem;
-    bottom: 1.5rem;
+    width: 100%;
     text-align: center;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -18,13 +16,12 @@ form {
 
 .inputForm {
     position: relative;
-    margin: 1rem 0;
+    margin: 1rem;
 }
 
 input {
-    width: 90%;
-    padding: 10px 0;
-    margin-left: 30px;
+    width: 100%;
+    padding: 0.6rem 1.5rem;
     border: none;
     border-bottom: 2px solid #ccc;
     outline: none;
@@ -40,8 +37,6 @@ input::placeholder {
     opacity: 0.7;
 }
 
-
-
 .icon {
     position: absolute;
     top: 10px;
@@ -52,12 +47,10 @@ input::placeholder {
     color: var(--colorText);
     opacity: 0.9;
     text-align: right;
-    margin-top: 0;
-    margin-bottom: 3rem;
 }
 
 p {
-    margin-top: 1.5rem;
+    /*margin-top: 1.5rem;*/
     color: var(--text);
     font-size: 0.8rem;
 }
@@ -74,9 +67,6 @@ p {
 }
 
 /* Register */
-.cad {
-    margin-top: 2rem;
-}
 
 .cad > .title {
     text-align: center;
@@ -94,9 +84,7 @@ p {
 .labelInput label, .labelInput input  {
    text-align: left;
 }
-.labelInput label {
-    width: 25vw;
-}
+
 
 .labelInput input {
     margin-left: 0;
