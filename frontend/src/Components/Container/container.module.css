@@ -1,8 +1,8 @@
 .container {
     position: relative;
     width: 100%;
-    margin-top: 5rem;
-    margin-bottom: 1.5rem;
+   /* top: 5rem;
+    bottom: 1.5rem;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,7 +49,7 @@
 button {
     width: 60%;
     padding: 0.5rem;
-    margin: auto;
+    margin: 2rem auto;
     background-color: var(--colorText);
     border: none;
     border-radius: 1.25rem;

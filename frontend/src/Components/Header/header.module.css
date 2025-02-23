@@ -3,18 +3,16 @@
     height: 5rem;
     color: var(--colortext);
     display: flex;
-    position: fixed;
+    margin: 0 1rem;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
     top: 2rem;
-    z-index: 10;
-        
+    z-index: 10;   
 }
 
 .logo {
     width: auto;
-    max-width: 12em;
+    max-width: 12rem;
 }
 
 .logoCenter {
@@ -55,9 +53,8 @@
 }
 
 .menuSandwich a:hover {
-    color: #007bff;
+    color: var(--colorLogo);
 }
-
 
 .menuButton {
     width: 2rem;
@@ -114,7 +111,7 @@
     color: var();
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     
      .menuSandwich {
         display: flex;
