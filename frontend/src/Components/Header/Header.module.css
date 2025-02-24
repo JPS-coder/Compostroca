@@ -4,6 +4,10 @@
     color: var(--colortext);
     display: flex;
     margin: 0 1rem;
+<<<<<<< HEAD:frontend/src/Components/Header/header.module.css
+=======
+    position: fixed;
+>>>>>>> 01e95db (add registerNewUser):frontend/src/Components/Header/Header.module.css
     align-items: center;
     justify-content: space-between;
     top: 2rem;

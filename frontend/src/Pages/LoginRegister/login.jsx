@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import styles from "./LoginRegister.module.css";
 import { FaAt, FaLock } from 'react-icons/fa'
 
-
 function Login() {
     const [email, setEMail] = useState("");
     const [password, setPassword] = useState("");
@@ -16,6 +15,7 @@ function Login() {
        setTimeout(() => {
         console.log("Login bem-sucedido (simulação)");
         navigate("/");  // Redireciona para a página "home"
+<<<<<<< HEAD
     }, 1000);
        /* try {
             const response = await axios.post("http://localhost:3000/auth/login", {email, password})
@@ -25,6 +25,9 @@ function Login() {
             console.error("Erro no login", error.response?.data || error.message)
         }*/
     };
+=======
+    }, 1000);}
+>>>>>>> 01e95db (add registerNewUser)
 
     return (
         <div className={styles.screenLoginRegister}>

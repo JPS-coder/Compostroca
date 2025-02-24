@@ -3,11 +3,11 @@ import Home from "./Pages/Home"
 import PageBase from "./Pages/PageBase";
 import Login from "./Pages/LoginRegister/login";
 import Register from "./Pages/LoginRegister/register"
-import RegisterNewUser from "./Pages/LoginRegister/registerNewUser";
-import Edit from "./Pages/LoginRegister/edit";
 import StationData from "./Pages/StationData";
 import Info from "./Pages/Info";
 import OrganiciDelivery from "./Pages/OrganicDelivery";
+import RegisterNewUser from "./Pages/LoginRegister/registerNewUser";
+import Edit from "./Pages/LoginRegister/edit"
 
 function AppRoutes() {
     return(
@@ -28,4 +28,4 @@ function AppRoutes() {
     )
 }
 
-export default AppRoutes
+export default AppRoutes;
