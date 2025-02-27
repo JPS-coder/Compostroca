@@ -24,7 +24,6 @@ const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
             <div className={styles.img}><img className={isLogoOnly ? styles.logoCenter : styles.logo} src={logo} alt='Logotipo compostroca'/></div>
             
             {!isLogoOnly && (
-<<<<<<< HEAD
               
               <>
                 <div
@@ -36,16 +35,6 @@ const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
                 </div>
 
                 
-=======
-                <>
-                <div
-                className={`${styles.menuButton} ${showMenu ? styles.close : ''}`}
-                onClick={toggleMenu}>
-                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
-                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
-                <span className={`${styles.linha} ${showMenu ? styles.linhaClose : ''}`}></span>
-                </div>            
->>>>>>> 01e95db (add registerNewUser)
                 <nav
                 className={`${styles.menuSandwich} ${ showMenu ? styles.show : ''}`}
                 >
@@ -61,7 +50,7 @@ const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
     )}
 
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

@@ -52,8 +52,8 @@ function StationData () {
         );
 
 
-    };
+    }
     
-};
+}
 
 export default StationData;
