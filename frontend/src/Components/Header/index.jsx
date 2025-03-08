@@ -50,7 +50,7 @@ const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
     )}
 
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
