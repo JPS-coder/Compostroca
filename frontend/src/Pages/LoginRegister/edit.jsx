@@ -24,6 +24,7 @@ function Edit() {
         setModalVisible(true);
     }
 
+    
     return (
         <div className={`${styles.screenLoginRegister} ${styles.cad} ${styles.edit}`}>
             <Messages
