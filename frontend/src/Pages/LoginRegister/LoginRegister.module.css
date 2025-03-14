@@ -47,17 +47,25 @@ input::placeholder {
     color: var(--colorText);
     opacity: 0.9;
     text-align: right;
+    font-size: 0.8rem;
+    cursor: pointer;
 }
 
-p {
-    /*margin-top: 1.5rem;*/
+.msg:hover {
     color: var(--text);
-    font-size: 0.8rem;
 }
+
+
+.paragraph {
+    display: flex;
+    justify-content: space-between;
+
+}
+
 
 .link {
     color: var(--text) !important;
-    opacity: 0.8;
+    opacity: 0.7 !important;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -65,6 +73,7 @@ p {
 .linkReg:hover {
     color: var(--shadow) !important;
 }
+
 
 /* Register */
 

@@ -2,11 +2,13 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import styles from "./LoginRegister.module.css";
 import { FaAt, FaLock } from 'react-icons/fa'
+import Reset from "../../Components/Reset";
 
 function Login() {
     const [email, setEMail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const [resetType, setResetType] = useState(null);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -50,18 +52,29 @@ function Login() {
                         required
                     />
                 </div>
-                <p className={styles.msg}> Esqueci a Senha</p>
+                <div className={styles.paragraph}>
+                    <p className={styles.msg} onClick={() => setResetType("firstAccess")}>
+                        Primeiro Acesso
+                    </p>
+                    <p className={styles.msg} onClick={() => setResetType('forgotPassword')}>
+                        Esqueci a Senha
+                    </p>
+                </div>
+                
                 
                 <button type="submit">Acessar</button>  
                        
             </form>
-
-            <p>
+{/*
+            <p className={styles.msg}>
                 Ainda não possui uma conta?<Link to ="/registernewuser" className={styles.link}>Crie Agora</Link>
-            </p>
-
+            </p>*/}
+            <div className={`${styles.resetContainer} ${resetType ? styles.show : styles.hide}`}>
+                {resetType !== null && <Reset type={resetType} />}
+            </div>
         </div>
     )
+    
 }
 
 export default Login;

@@ -102,7 +102,7 @@ function RegisterNewUser() {
                 <button type='submit'>Registrar</button>
             </form>
 
-            <p>
+            <p className={styles.msg}>
                 Já possui uma conta? <Link to ="/login" className={styles.link}>Faça Login</Link>
             </p>
 
