@@ -13,6 +13,7 @@
 
 body {
   background-color: var(--backgroud);
+  
   font-family: var(--font-pattern);
 }
 
@@ -22,4 +23,5 @@ body {
   box-sizing: border-box;
   font-family: var(--font-pattern);
 }
+
 

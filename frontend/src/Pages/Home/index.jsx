@@ -1,20 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./Home.module.css";
+import { useState } from 'react';
+import styles from './Home.module.css';
+import { useNavigate, Link } from 'react-router-dom';
+import { FaAt, FaLock } from 'react-icons/fa';
 
 
-function Home () {
+function Home() {
     return (
-        <section className={styles.home}>
-            <div className={styles.cards}>
-                <Link to= "/edit"><div className={styles.card}>Editar Dados</div>
-                </Link>
-                <Link to = "OrganicDelivery"><div className={styles.card}>Entrega de Resíduos</div></Link>
-                <Link to = "StationData"><div className={styles.card}>Dados da Estação</div></Link>
-                <Link to = "Info"><div className={styles.card}>Informações</div></Link>
+        <div className={styles.home}>            
+            <div className='button-container'>
+                {/* Botão 1 */}
+                <button className='text-button'>
+                    Cuidados e dicas sobre hortas
+                </button>
+
+                {/* Botão 2 */}
+                <button className='text-button'>
+                    Compostagem
+                </button>
+
+                {/* Botão 3 */}
+                <button className='text-button'>
+                    Alimentação e receitas
+                </button>
             </div>
-        </section>
-    )
+        </div>
+    );
 }
 
-export default Home
+export default Home;

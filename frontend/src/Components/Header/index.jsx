@@ -38,11 +38,11 @@ const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
                 <nav
                 className={`${styles.menuSandwich} ${ showMenu ? styles.show : ''}`}
                 >
-                    <Link to="/">Home</Link>
+                    <Link to="/">Informaçôes</Link>
                     <Link to="/edit">Editar Dados</Link>
                     <Link to="/OrganicDelivery">Entrega de Resíduos</Link>
                     <Link to="/StationData">Dados da Estação</Link>
-                    <Link to="/Info">Informaçoes</Link>   
+                    <Link to="/Menu">Menu</Link>   
                 </nav>
       
             </>
