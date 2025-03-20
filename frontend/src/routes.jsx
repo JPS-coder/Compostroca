@@ -9,6 +9,7 @@ import OrganiciDelivery from "./Pages/OrganicDelivery";
 import RegisterNewUser from "./Pages/LoginRegister/registerNewUser";
 import Edit from "./Pages/LoginRegister/edit"
 
+
 function AppRoutes() {
     return(
         <BrowserRouter>
@@ -22,6 +23,7 @@ function AppRoutes() {
                     <Route path="/stationData" element={ <StationData/> } />
                     <Route path="/menu" element={ <Menu/> } />
                     <Route path="/organicDelivery" element={ <OrganiciDelivery/> } />
+                    
                 </Route>
             </Routes>
         </BrowserRouter>

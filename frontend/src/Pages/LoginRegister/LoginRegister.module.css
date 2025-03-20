@@ -1,8 +1,11 @@
 .screenLoginRegister {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     text-align: center;
     border-radius: 0.5rem;
-    overflow: hidden;
+    overflow: hidden;   
 }
 
 h2 {
@@ -12,6 +15,7 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
+
 }
 
 .inputForm {
@@ -74,6 +78,9 @@ input::placeholder {
     color: var(--shadow) !important;
 }
 
+.btnAccess {
+    margin-top: 3rem;
+}
 
 /* Register */
 
@@ -111,3 +118,40 @@ input::placeholder {
 .edit > .title {
     margin-bottom: 0;
 }
+
+.resetContainer {
+    position: fixed; /* Faz com que o modal fique sobre a página */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    display: none; /* Por padrão, o modal não aparece */
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/* Opcional: fundo escuro para destacar o modal */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    
+}
+
+

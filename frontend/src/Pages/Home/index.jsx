@@ -7,23 +7,24 @@ import { FaAt, FaLock } from 'react-icons/fa';
 function Home() {
     return (
         <div className={styles.home}>            
-            <div className='button-container'>
+            <div className={styles.buttoncontainer}>
                 {/* Botão 1 */}
-                <button className='text-button'>
+                <button className={styles.textbutton}>
                     Cuidados e dicas sobre hortas
                 </button>
 
                 {/* Botão 2 */}
-                <button className='text-button'>
+                <button className= {styles.textbutton}>
                     Compostagem
                 </button>
 
                 {/* Botão 3 */}
-                <button className='text-button'>
+                <button className={styles.textbutton}>
                     Alimentação e receitas
                 </button>
             </div>
         </div>
+        
     );
 }
 

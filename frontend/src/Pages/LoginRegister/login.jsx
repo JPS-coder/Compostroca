@@ -43,6 +43,7 @@ function Login() {
                 </div>
 
                 <div className={styles.inputForm}>
+
                     <FaLock className={styles.icon} />
                     <input 
                         type="password" 
@@ -62,16 +63,11 @@ function Login() {
                 </div>
                 
                 
-                <button type="submit">Acessar</button>  
+                <button className={styles.btnAccess}type="submit">Acessar</button>  
                        
             </form>
-{/*
-            <p className={styles.msg}>
-                Ainda não possui uma conta?<Link to ="/registernewuser" className={styles.link}>Crie Agora</Link>
-            </p>*/}
-            <div className={`${styles.resetContainer} ${resetType ? styles.show : styles.hide}`}>
-                {resetType !== null && <Reset type={resetType} />}
-            </div>
+
+
         </div>
     )
     
