@@ -1,5 +1,6 @@
 import styles from './Cooking.module.css'
 import { Link } from 'react-router-dom'
+import CategorySection from '../../Components/CategorySection';
 
 const latestPost = {
     id: 1,
@@ -40,22 +41,6 @@ function Cooking() {
                     <CategorySection title="Receitas" posts={categories.receitas} />
             </div>
 
-            {/* Container principal: Último artigo + Sidebar 
-            <div className={styles.container}>   
-                {/* Coluna Principal (Último Artigo)
-                <div className={styles.mainContent}>
-                    <h2>{latestPost.title}</h2>
-                    <p>{latestPost.summary}</p>
-                    <Link to={`/post/${latestPost.id}`}>Ler mais</Link>
-                </div>
-
-                Sidebar (Lista de Categorias) 
-                <aside className={styles.sidebar}>
-                    <CategorySection title="Alimentação" posts={categories.alimentacao} />
-                    <CategorySection title="Receitas" posts={categories.receitas} />
-                </aside>
-            </div>
-            */}
                         
             <div className={styles.btncook}>
 
@@ -72,22 +57,6 @@ function Cooking() {
         </div>
     )
 }
-function CategorySection({ title, posts }) {
-    return (
-        <div className={styles.category}>
-            <h3>{title}</h3>
-            <ul>
-                {posts.map((post) => (
-                    <li key={post.id}>
-                        <Link to={`/post/${post.id}`}>{post.title}</Link>
-                    </li>
-                ))}
-            </ul>
-            <Link to={`/category/${title.toLowerCase()}`}>
-                <button className={styles.viewMore}>Ver mais</button>
-            </Link>
-        </div>
-    );
-}
+
 
 export default Cooking;
