@@ -4,7 +4,7 @@
 }
 
 
-/* Container dos botões */
+/* Container dos botões
 .button-container {
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
     gap: 2px;
 }
 
-/* Estilo dos botões */
+/* Estilo dos botões
 .text-button {
     padding: 1rem 4rem;
     font-size: 1rem;
@@ -20,7 +20,8 @@
     background-color: brown;
     border: none;
     border-radius: 1px;
-}
+}*/
+
 
 .home button {
     width: 75% !important;

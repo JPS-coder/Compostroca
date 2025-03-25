@@ -94,7 +94,7 @@ function Edit() {
                 <div className={styles.inputForm}>
                         <div className={styles.labelInput}>
                             <label>
-                                Sennha:
+                                Senha:
                             </label>
                             <input
                                 type="text"

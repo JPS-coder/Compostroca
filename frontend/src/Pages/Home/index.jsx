@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Home.module.css';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaAt, FaLock } from 'react-icons/fa';
 
 
@@ -9,19 +9,25 @@ function Home() {
         <div className={styles.home}>            
             <div className={styles.buttoncontainer}>
                 {/* Botão 1 */}
-                <button className={styles.textbutton}>
-                    Cuidados e dicas sobre hortas
-                </button>
+                <Link to="GardenCare">
+                    <button className={styles.textbutton}>
+                        Guia da Horta
+                    </button>
+                </Link>
 
                 {/* Botão 2 */}
-                <button className= {styles.textbutton}>
-                    Compostagem
-                </button>
+                <Link to="Composting">
+                    <button className= {styles.textbutton}>
+                        Compostagem
+                    </button>
+                </Link>
 
                 {/* Botão 3 */}
-                <button className={styles.textbutton}>
-                    Alimentação e receitas
-                </button>
+                <Link to="Cooking">
+                    <button className={styles.textbutton}>
+                        Alimentação e Receitas
+                    </button>
+                </Link>
             </div>
         </div>
         
