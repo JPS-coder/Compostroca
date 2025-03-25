@@ -11,6 +11,8 @@ lerna-debug.log*
 dist
 dist-ssr
 *.local
+frontend/src/Pages/Cooking/index2.jsx
+frontend/arquivo.txt
 
 
 backend/.env
