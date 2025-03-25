@@ -1,0 +1,20 @@
+.composting {
+    display: flex;
+    flex-direction: column; 
+}
+
+.composting > div:first-child {
+    text-align: center; /* Alinha o título ao centro */
+    margin-top: 1rem; /* Distância do topo */
+}
+
+.btncomp {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.btncomp button {
+    font-size: 0.9rem;
+    margin-inline:0.2rem;
+}

@@ -1,0 +1,18 @@
+.garden {
+    display: flex;
+    flex-direction: column; 
+}
+
+.garden > div:first-child {
+    text-align: center; /* Alinha o título ao centro */
+    margin-top: 1rem; /* Distância do topo */
+}
+
+.btngarden {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.btngarden button {
+    font-size: 0.9rem;
+}

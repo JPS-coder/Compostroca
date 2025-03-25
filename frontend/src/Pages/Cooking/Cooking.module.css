@@ -1,0 +1,157 @@
+.cooking {
+    display: flex;
+    flex-direction: column; 
+}
+
+.cooking h1 {
+    font-size: 1.5rem;
+}
+
+.cooking > div:first-child {
+    text-align: center; /* Alinha o título ao centro */
+    margin-top: 1rem; /* Distância do topo */
+}
+
+.mainContent h2 {
+    font-size: 1.3rem;
+}
+
+.btncook {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.btncook button {
+    font-size: 0.9rem;
+    margin-inline:0.2rem;
+}
+
+
+/*css página post e category
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.mainContent {
+    flex: 2;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.category h3 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category ul li {
+    margin-bottom: 5px;
+}*/
+
+/* Layout principal (Mobile-first: uma coluna) */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Último artigo */
+.mainContent {
+    /*background: #f8f9fa;*/
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.readMore {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    background: #007bff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.readMore:hover {
+    background: #0056b3;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Categorias */
+.category {
+    /*background: #fff3cd;*/
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.category h3 {
+    margin-bottom: 10px;
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category ul li {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.viewMore {
+    border: 0.1rem solid var(--shadow);
+    background-color: var(--background);
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.viewMore:hover {
+    transform: scaleX(1.12);
+    transition: transform 0.3s ease;
+    color: var(--background);
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mainContent {
+        width: 60%;
+    }
+
+    .sidebar {
+        width: 35%;
+    }
+}
