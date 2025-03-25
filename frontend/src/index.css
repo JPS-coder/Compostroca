@@ -5,7 +5,8 @@
   --shadow: rgb(114, 90, 49);
   --text: rgba(0, 0, 0, 0.822);
   --colorLogo: rgb(21, 141, 68);
-
+  --header-height:6rem;
+  --footer-height:1.5rem;
 
 
 }
@@ -14,6 +15,23 @@
 body {
   background-color: var(--backgroud);
   font-family: var(--font-pattern);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/background.svg') center / contain no-repeat;
+  background-attachment: fixed;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 * { 
@@ -22,5 +40,7 @@ body {
   box-sizing: border-box;
   font-family: var(--font-pattern);
 }
+
+
 
 

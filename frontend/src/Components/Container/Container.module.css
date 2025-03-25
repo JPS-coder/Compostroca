@@ -21,9 +21,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../../assets/background.svg') center/contain no-repeat; 
+    min-height: inherit;
+    /*background: url('../../assets/background.svg') center top / cover no-repeat; */
     opacity: 0.3; 
-    z-index: -1;
+    z-index: -10;
+
 }
 
 .container h1 {
@@ -52,7 +54,7 @@
 
 
 button {
-    width: 60%;
+    width: auto;
     padding: 0.5rem;
     margin: 2rem auto;
     background-color: var(--colorText);
