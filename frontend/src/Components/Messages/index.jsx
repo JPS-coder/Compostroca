@@ -22,7 +22,7 @@ function Messages({ message, extraMessage, type, onClose, actionText, onAction }
                             {actionText}
                         </a>
                     )}
-                    <Link to='/'><button className={styles.closeButton} onClick={onClose}>X</button></Link>
+                    <Link to='/menu'><button className={styles.closeButton} onClick={onClose}>X</button></Link>
                     {actionText}
                 </div>
             </div>

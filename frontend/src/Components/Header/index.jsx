@@ -13,9 +13,9 @@ function Header() {
       
 const location = useLocation();
 
-const noMenuPages = ['/', '/login', '/register', '/registerNewUser', '/cooking', '/composting', '/gardencare'];
+const noMenuPages = ['/', '/login', '/register', '/menu', '/registerNewUser', '/cooking', '/composting', '/gardencare'];
 
-const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase());
+const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase()) || location.pathname.startsWith('/category/') || location.pathname.startsWith('/post/');
 
 
     return (
