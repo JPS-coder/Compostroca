@@ -16,7 +16,7 @@ function Login() {
        // simulacao tempo de resposta api
        setTimeout(() => {
         console.log("Login bem-sucedido (simulação)");
-        navigate("/");  // Redireciona para a página "home"
+        navigate("/menu");  // Redireciona para a página "home"
     }, 1000);
        /* try {
             const response = await axios.post("http://localhost:3000/auth/login", {email, password})
@@ -26,6 +26,9 @@ function Login() {
             console.error("Erro no login", error.response?.data || error.message)
         }*/
     };
+    if (resetType) {
+        return <Reset type={resetType} onCancel={() => setResetType(null)} />;
+    }
 
     return (
         <div className={styles.screenLoginRegister}>
@@ -63,10 +66,17 @@ function Login() {
                 </div>
                 
                 
-                <button className={styles.btnAccess}type="submit">Acessar</button>  
-                       
+                <button className={styles.btnAccess} type="submit">Acessar</button>          
             </form>
 
+            {resetType && (
+                <div className={styles.modalOverlay}>
+                    <div className={styles.modal}>
+                        <Reset type={resetType} closeModal={() => setResetType(null)}/>
+                        
+                    </div>
+                </div>
+            )}
 
         </div>
     )

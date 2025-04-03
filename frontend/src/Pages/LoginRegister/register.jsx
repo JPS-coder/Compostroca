@@ -23,7 +23,7 @@ function Register() {
                 Muito Obrigado!
             </>)
         setType('success');
-        setRedirectTo('/');
+        setRedirectTo('/menu');
         setModalVisible(true);
     }
        // const cadastroSimulado = true;
@@ -65,7 +65,19 @@ function Register() {
                             required
                         />
                     </div>
-                   
+                
+                </div>
+                <div className={styles.inputForm}>
+                    <div className={styles.labelInput}>
+                        <label>Telefone:</label>
+                        <input
+                            type="tel"
+                            value={phone}
+                            onChange={(e) => setPhone(e. target.value)}
+                            required
+                        />
+                    </div>
+                    
                 </div>
 
                 <div className={styles.inputForm}>
@@ -81,18 +93,7 @@ function Register() {
                        
                 </div>
 
-                <div className={styles.inputForm}>
-                    <div className={styles.labelInput}>
-                        <label>Telefone:</label>
-                        <input
-                            type="tel"
-                            value={phone}
-                            onChange={(e) => setPhone(e. target.value)}
-                            required
-                        />
-                    </div>
-                    
-                </div>
+                
 
                 <button className={styles.cad} type='submit'>Enviar</button>
             </form>

@@ -11,7 +11,7 @@ function Menu () {
                 </Link>
                 <Link to = "OrganicDelivery"><div className={styles.card}>Entrega de Resíduos</div></Link>
                 <Link to = "StationData"><div className={styles.card}>Dados da Estação</div></Link>
-                <Link to = "Info"><div className={styles.card}>Informações</div></Link>
+                <Link to = "/"><div className={styles.card}>Informações</div></Link>
             </div>
         </section>
     )

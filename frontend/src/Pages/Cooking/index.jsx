@@ -6,23 +6,20 @@ const latestPost = {
     id: 1,
     title: "Benefícios de uma alimentação saudável",
     summary: "Uma alimentação equilibrada melhora sua saúde e bem-estar...",
-    category: "alimentacao"
+    category: "nutrition"
 };
 
 const categories = {
-    alimentacao: [
+    nutrition: [
         { id: 2, title: "Como reduzir o consumo de açúcar" },
         { id: 3, title: "Dicas para uma dieta equilibrada" },
         { id: 4, title: "Alimentos ricos em fibras" },
-        { id: 5, title: "A importância da hidratação" },
-        { id: 6, title: "Superalimentos: o que são?" }
+        
     ],
-    receitas: [
+    recipe: [
         { id: 7, title: "Pão caseiro sem fermento" },
         { id: 8, title: "Salada de quinoa com legumes" },
         { id: 9, title: "Sopa detox para o inverno" },
-        { id: 10, title: "Smoothie de frutas vermelhas" },
-        { id: 11, title: "Bolo de banana sem açúcar" }
     ]
 };
 
@@ -37,8 +34,8 @@ function Cooking() {
                     <Link to={`/post/${latestPost.id}`}>Ler mais</Link>
             </div>
             <div className={styles.sidebar}>
-                    <CategorySection title="Alimentação" posts={categories.alimentacao} />
-                    <CategorySection title="Receitas" posts={categories.receitas} />
+                    <CategorySection title="Alimentação" posts={categories.nutrition} />
+                    <CategorySection title="Receitas" posts={categories.recipe} />
             </div>
 
                         
