@@ -54,11 +54,11 @@
 button {
     width: auto;
     padding: 0.5rem;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
     background-color: var(--colorText);
     border: none;
     border-radius: 1.25rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
 }

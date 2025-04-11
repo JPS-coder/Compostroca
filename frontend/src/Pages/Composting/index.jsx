@@ -7,20 +7,20 @@ const videos = [
     title: "O que é compostagem?",
     description: "Conheça esse processo biológico que se decompõe e se transforma em um adubo natural",
     thumbnail: "https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg",
-    url: "https://www.youtube.com/watch?v=VIDEO_ID_1"
+    url: "#"
 },
 {
     id: 2,
     title: "Tipos de Compostagem",
     description: "Conheça os 4 tipos de compostagem e aprenda como produzí-la.",
     thumbnail: "https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg",
-    url: "https://www.youtube.com/watch?v=VIDEO_ID_2"
+    url: "#"
 },
 {
     id: 3,
     title: "Benefícios da Compostagem" ,     description: "Descobra os beneficios da compostagem para o meio ambiente",
     thumbnail: "https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg",
-    url: "https://www.youtube.com/watch?v=VIDEO_ID_3"
+    url: "#"
 }
 ];
 

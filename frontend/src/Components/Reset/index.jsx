@@ -131,7 +131,7 @@ function Reset({ type, onCancel }) {
                         onChange={(e) => setConfirmPassword(e.target.value)}
                         required
                     />
-                    <button type="submit" className={styles.btn}>Confirmar Senha</button>
+                    <button type="submit" className={styles.btn}>Alterar Senha</button>
                 </form>
             )}
 

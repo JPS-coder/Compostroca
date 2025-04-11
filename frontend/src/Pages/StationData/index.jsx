@@ -5,7 +5,7 @@ import axios from "axios";
 
 function StationData () {
     const [nameStation, setNameStation] = useState('');
-    const {volStation, setVolStation} = useState('');
+    const [volStation, setVolStation] = useState('');
     const [volPerson, setVolPerson] = useState('');
     const [volTotal, setVolTotal] = useState('');
     const [co2Avoided, setCO2Avoided] = useState('')
@@ -16,10 +16,16 @@ function StationData () {
         e.preventDefault();
 
         const data = {
-            stationName,
+            nameStation,
+            volStation,
+            volPerson,
+            volTotal,
+            co2Avoided
         }
 
+        console.log("DEados simulados para envio:", data)
 
+/*
         try {
             const response = await axios.post("http://localhost:3000/api/stationdata", data);
             console.log("Dados da estação enviados com sucesso:", response.data);
@@ -28,26 +34,47 @@ function StationData () {
             console.error("Erro ao enviar os dados da estação:", error.response?.data || error.message);
         }
   
-}  
+  */
+        navigate("/sucessPage")
+    }
     return(
         <div className={styles.stationdata}>
             <h2>Dados da Estação</h2>
             <form onSubmit={handleStationData}>
-                <label> Nome da Estação
-                    <input type="text" value={nameStation} onChange={(e) => setNameStation(e.target.value)} />
-                </label>
-                <label> Volume da Estação
-                    <input type="number" value={volStation} onChange={(e) => setVolStation(e.target.value)} />
-                </label>
-                <label> Volume por Pessoa
-                    <input type="number" value={volPerson} onChange={(e) => setVolPerson(e.target.value)} />
-                </label>
-                <label> Volume Total
-                    <input type="number" value={volTotal} onChange={(e) => setVolTotal(e.target.value)} />
-                </label>
-                <label> Emissões evitadas de CO2
-                    <input type="number" value={co2Avoided} onChange={(e) => setCO2Avoided(e.target.value)} />
-                </label>
+                <div className={styles.inputForm}>
+                    <div className={styles.labelInput}>
+                        <label> Nome da Estação</label>
+                            <input type="text" value={nameStation} onChange={(e) => setNameStation(e.target.value)} />   
+                    </div>
+                </div>
+                <div className={styles.inputForm}>
+                    <div className={styles.labelInput}>
+                        <label> Volume da Estação </label>
+                            <input type="number" value={volStation} onChange={(e) => setVolStation(e.target.value)} />
+                    </div>
+                    
+                </div>
+                <div className={styles.inputForm}>
+                    <div className={styles.labelInput}>
+                        <label> Volume por Pessoa </label>
+                            <input type="number" value={volPerson} onChange={(e) => setVolPerson(e.target.value)} />
+                        
+                    </div>
+                </div>
+                <div className={styles.inputForm}>
+                    <div className={styles.labelInput}>
+                        <label> Volume Total</label>
+                            <input type="number" value={volTotal} onChange={(e) => setVolTotal(e.target.value)} />
+                     
+                    </div>
+                </div>
+                <div className={styles.inputForm}>
+                    <div className={styles.labelInput}>
+                        <label> Emissões evitadas de CO2</label>
+                            <input type="number" value={co2Avoided} onChange={(e) => setCO2Avoided(e.target.value)} />
+                        
+                    </div>
+                </div>
 
 
                 <button type="submit">Concluir</button>

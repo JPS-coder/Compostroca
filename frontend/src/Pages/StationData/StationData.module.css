@@ -1,0 +1,42 @@
+.stationdata {
+    font-size: 0.9rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputForm {
+    position: relative;
+    margin: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+}
+
+input:focus {
+    border-bottom: 2px solid var(--shadow);
+}
+
+.labelInput {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    width: 100%;
+}
+
+.labelInput label, .labelInput input  {
+    text-align: left;
+ }
+ 
+ 
+ .labelInput input {
+    margin-left: 0;
+ } 

@@ -7,25 +7,25 @@ const videos = [
         title: "Dicas para uma horta saudável",
         description: "Cuide de sua horta com essas dicas, para deixá-la saudável e produtiva.",
         thumbnail: "https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg",
-        url: "https://www.youtube.com/watch?v=VIDEO_ID_1"
+        url: "#"
     },
     {
         id: 2,
         title: "Inseticidas Naturais",
         description: "Aprenda a fazer esse inseticida natural para eliminar pragas e doenças.",
         thumbnail: "https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg",
-        url: "https://www.youtube.com/watch?v=VIDEO_ID_2"
+        url: "#"
     },
     {
         id: 3,
         title: "Qual tipo solo, você tem na horta?",
         description: "Truques simples para identificar seu solo",
         thumbnail: "https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg",
-        url: "https://www.youtube.com/watch?v=VIDEO_ID_3"
+        url: "#"
     }
 ];
 
-const channelUrl = "https://www.youtube.com/@SeuCanal"; // 🔹 Substitua pelo link do canal!
+const channelUrl = "#"; // Link do canal!
 
 
 function GardenCare() {

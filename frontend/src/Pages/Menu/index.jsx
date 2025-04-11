@@ -9,8 +9,8 @@ function Menu () {
             <div className={styles.cards}>
                 <Link to= "/edit"><div className={styles.card}>Editar Dados</div>
                 </Link>
-                <Link to = "OrganicDelivery"><div className={styles.card}>Entrega de Resíduos</div></Link>
-                <Link to = "StationData"><div className={styles.card}>Dados da Estação</div></Link>
+                <Link to = "/OrganicDelivery"><div className={styles.card}>Entrega de Resíduos</div></Link>
+                <Link to = "/StationData"><div className={styles.card}>Dados da Estação</div></Link>
                 <Link to = "/"><div className={styles.card}>Informações</div></Link>
             </div>
         </section>

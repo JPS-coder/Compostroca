@@ -1,13 +1,11 @@
 .header {
     width: 100%;
     height: 5rem;
-    top: 0;
     color: var(--colortext);
     display: flex;
     margin: 0 1rem;
     align-items: center;
     justify-content: space-between;
-    top: 2rem;
     z-index: 10;   
 }
 
@@ -64,10 +62,9 @@
     cursor:pointer;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
-    padding: 0 1REM;
-    right: 4rem;
+    padding: 0 1rem;
+    right: 2rem;
 }
 
 .linha {
