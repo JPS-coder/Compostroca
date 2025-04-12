@@ -1,14 +1,17 @@
-import {React, useState } from 'react';
+import { React, useState } from 'react';
 import styles from './StationData.module.css'
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Messages from '../../Components/Messages';
 
 function StationData () {
     const [nameStation, setNameStation] = useState('');
     const [volStation, setVolStation] = useState('');
     const [volPerson, setVolPerson] = useState('');
     const [volTotal, setVolTotal] = useState('');
-    const [co2Avoided, setCO2Avoided] = useState('')
+    const [co2Avoided, setCO2Avoided] = useState('');
+    const [message, setMessage] = useState('');
+    const [showMessage, setShowMessage] = useState(false);
     
     const navigate = useNavigate();
     
@@ -23,7 +26,7 @@ function StationData () {
             co2Avoided
         }
 
-        console.log("DEados simulados para envio:", data)
+        console.log("Dados simulados para envio:", data)
 
 /*
         try {
@@ -39,7 +42,7 @@ function StationData () {
     }
     return(
         <div className={styles.stationdata}>
-            <h2>Dados da Estação</h2>
+            <h2>Cadastro da Estação</h2>
             <form onSubmit={handleStationData}>
                 <div className={styles.inputForm}>
                     <div className={styles.labelInput}>

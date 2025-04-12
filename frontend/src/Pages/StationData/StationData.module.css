@@ -39,4 +39,17 @@ input:focus {
  
  .labelInput input {
     margin-left: 0;
- } 
+ }
+
+ /* viewStationData*/
+
+ .displayBox {
+    background-color: #f4f4f4;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0.3rem;
+  }
+  
