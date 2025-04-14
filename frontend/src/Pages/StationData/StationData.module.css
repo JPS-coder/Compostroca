@@ -2,14 +2,9 @@
     font-size: 0.9rem;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
 .inputForm {
     position: relative;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 input {
@@ -30,6 +25,7 @@ input:focus {
     grid-template-columns: repeat(2, 1fr);
     align-items: end;
     width: 100%;
+    gap: 0.5rem;
 }
 
 .labelInput label, .labelInput input  {
@@ -41,15 +37,40 @@ input:focus {
     margin-left: 0;
  }
 
+
+
  /* viewStationData*/
 
+ .labelView {
+    display: flex;
+    align-items: center;
+    height: 100%;
+ }
+
  .displayBox {
-    background-color: #f4f4f4;
     padding: 0.6rem 1rem;
     border-radius: 6px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--shadow);
     font-size: 1rem;
     color: #333;
     margin-top: 0.3rem;
   }
-  
+
+.containerSpan {
+    display: flex;
+    justify-content: flex-end;
+}
+.btnsReg {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.btnReg, .btnSpan {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text);
+    border: 1px solid var(--shadow);
+    border-radius: 0.5rem;
+}

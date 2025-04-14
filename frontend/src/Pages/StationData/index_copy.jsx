@@ -1,8 +1,8 @@
 import { React, useState } from 'react';
 import styles from './StationData.module.css'
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import Messages from '../../Components/Messages';
-import SearchModal from '../../Components/Modal/searchModal';
 
 function StationData () {
     const [nameStation, setNameStation] = useState('');
@@ -12,17 +12,8 @@ function StationData () {
     const [co2Avoided, setCO2Avoided] = useState('');
     const [message, setMessage] = useState('');
     const [showMessage, setShowMessage] = useState(false);
-    const [showSearchModal, setShowSearchModal] = useState('');  
-   
-
-    const handleNewRegister = () => {
-        setNameStation('');
-        setVolStation('');
-        setVolPerson('');
-        setVolTotal('');
-        setCO2Avoided('');
-        setShowMessage(false); // fecha o modal
-      };
+    
+    const navigate = useNavigate();
     
     const handleStationData = async (e) => {
         e.preventDefault();
@@ -37,24 +28,20 @@ function StationData () {
 
         console.log("Dados simulados para envio:", data)
 
+/*
         try {
-            // await axios.post("http://localhost:3000/api/stationdata", data);
-            setMessage("Dados salvos com sucesso!");
-            setShowMessage(true);
-            
-            
-        } catch (error) {
-            console.error("Erro ao enviar os dados da estação:", error);
-            setMessage("Erro ao salvar dados.");
-            setShowMessage(true);
+            const response = await axios.post("http://localhost:3000/api/stationdata", data);
+            console.log("Dados da estação enviados com sucesso:", response.data);
+            navigate("/sucessPage");
+        } catch (error){
+            console.error("Erro ao enviar os dados da estação:", error.response?.data || error.message);
         }
-
+  
+  */
+        navigate("/sucessPage")
     }
     return(
         <div className={styles.stationdata}>
-            <div className={styles.containerSpan}>
-                <span className={styles.btnSpan} onClick={() => setShowSearchModal(true)}>Visualizar Dados</span>
-            </div>
             <h2>Cadastro da Estação</h2>
             <form onSubmit={handleStationData}>
                 <div className={styles.inputForm}>
@@ -93,32 +80,8 @@ function StationData () {
                 </div>
 
 
-                <button type="submit">Salvar</button>
+                <button type="submit">Concluir</button>
             </form>
-
-            {showMessage && (
-                <Messages
-                message={message}
-                type="success"
-                onClose={() => setShowMessage(false)}
-                
-                
-                >
-                    <div className={styles.btnsReg}>
-                        <Link to="#">
-                            <p className={styles.btnReg} onClick={(e) => {
-                                e.preventDefault();
-                                handleNewRegister();
-                                }}>Novo cadastro</p>
-                        </Link>
-                        
-                        <Link to="/stationData/view/1"><p className={styles.btnReg}>Visualizar Dados</p></Link>
-                    </div>
-
-                </Messages>    
-            )}
-
-            {showSearchModal && <SearchModal onClose={() => setShowSearchModal(false)} />}
 
         </div>
         );
