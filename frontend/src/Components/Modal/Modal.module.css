@@ -21,3 +21,21 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
+
+ .modalButtons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    background-color: var(--background);  
+}
+
+button {
+    display: inline-block;
+    width: auto;
+    font-size: 0.8rem;
+    background-color: var(--background);
+    border: 2px solid var(--shadow
+    )
+}

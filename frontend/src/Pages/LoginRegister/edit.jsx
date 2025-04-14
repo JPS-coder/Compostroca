@@ -10,6 +10,7 @@ function Edit() {
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState(null)
     const [type, setType] = useState(null)
+    const [showMessage, setShowMessage] = useState(false)
 
     const handleEdit = async (e) => {
         e.preventDefault();
@@ -20,8 +21,8 @@ function Edit() {
                 Dados salvos <br/>com sucesso.
             </>)
         setType('success');
-        setRedirectTo('/');
-        setModalVisible(true);
+        setShowMessage(true);
+        
     }
 
     
@@ -30,7 +31,9 @@ function Edit() {
             <Messages
                 message={message}
                 type={type}
-                onClose={() => setMessage(null)}
+                onClose={() => {setShowMessage(false);
+                setMessage(null);
+                }}
             />
             <h2 className={styles.title}>Editar Dados</h2>
             <form onSubmit={handleEdit}>

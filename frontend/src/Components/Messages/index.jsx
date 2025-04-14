@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/logotipo.svg';
 import styles from './Messages.module.css'
 
-function Messages({ message, extraMessage, type, onClose, actionText, onAction }) {
+function Messages({ message, extraMessage, type, onClose, actionText, onAction, children }) {
     if (!message) return null;
 
     const messageClass = type === 'success' ? styles.successMessage : styles.console.errorMessage;
@@ -22,6 +22,8 @@ function Messages({ message, extraMessage, type, onClose, actionText, onAction }
                             {actionText}
                         </a>
                     )}
+                    {children && <div className={styles.customActions}>{children}</div>}
+
                     <Link to='/menu'><button className={styles.closeButton} onClick={onClose}>X</button></Link>
                     {actionText}
                 </div>

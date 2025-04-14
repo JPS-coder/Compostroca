@@ -34,8 +34,7 @@ function AppRoutes() {
                     <Route path="/cooking" element={ <Cooking/> } />
                     <Route path="/post/:id" element={<PostPage />} />
                     <Route path="/category/:categoryName" element={<CategoryPage />} />
-                    <Route path="/stationData/view/:id" element={<View />} />
-                    
+                    <Route path="/stationData/view/:id" element={<View />} />  
                 </Route>
             </Routes>
         </BrowserRouter>

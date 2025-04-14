@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 frontend/src/Pages/Cooking/index2.jsx
+frontend/src/Pages/StationData/index_copy.jsx
 
 
 
