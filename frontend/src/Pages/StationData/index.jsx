@@ -12,7 +12,7 @@ function StationData () {
     const [co2Avoided, setCO2Avoided] = useState('');
     const [message, setMessage] = useState('');
     const [showMessage, setShowMessage] = useState(false);
-    const [showSearchModal, setShowSearchModal] = useState('');  
+    const [showSearchModal, setShowSearchModal] = useState(false);  
    
 
     const handleNewRegister = () => {
@@ -105,14 +105,15 @@ function StationData () {
                 
                 >
                     <div className={styles.btnsReg}>
-                        <Link to="#">
-                            <p className={styles.btnReg} onClick={(e) => {
+                        <p className={styles.btnReg} onClick={(e) => {
                                 e.preventDefault();
                                 handleNewRegister();
                                 }}>Novo cadastro</p>
-                        </Link>
                         
-                        <Link to="/stationData/view/1"><p className={styles.btnReg}>Visualizar Dados</p></Link>
+                        <p className={styles.btnReg} onClick={(e) => {
+                            e.preventDefault();
+                            setShowSearchModal(true)
+                        }}>Visualizar Dados</p>
                     </div>
 
                 </Messages>    
