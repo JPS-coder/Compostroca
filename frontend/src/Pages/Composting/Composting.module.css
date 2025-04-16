@@ -5,8 +5,8 @@
 }
 
 .composting > div:first-child {
-    text-align: center; /* Alinha o título ao centro */
-    margin-top: 1rem; /* Distância do topo */
+    text-align: center; 
+    margin-top: 1rem;
 }
 
 .videoList {
@@ -33,8 +33,8 @@
 
 
 .thumbnail {
-    /*width: 100%;
-    height: auto;*/
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 0.5rem;
 }

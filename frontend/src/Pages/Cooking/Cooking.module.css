@@ -8,8 +8,8 @@
 }
 
 .cooking > div:first-child {
-    text-align: center; /* Alinha o título ao centro */
-    margin-top: 1rem; /* Distância do topo */
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .mainContent h2 {
@@ -40,39 +40,6 @@
 }
 
 
-/*css página post e category
-
-.container {
-    display: flex;
-    gap: 20px;
-}
-
-.mainContent {
-    flex: 2;
-}
-
-.sidebar {
-    flex: 1;
-}
-
-.category {
-    margin-bottom: 20px;
-}
-
-.category h3 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-}
-
-.category ul {
-    list-style: none;
-    padding: 0;
-}
-
-.category ul li {
-    margin-bottom: 5px;
-}*/
-
 /* Layout principal (Mobile-first: uma coluna) */
 .container {
     display: flex;
@@ -84,7 +51,6 @@
 
 /* Último artigo */
 .mainContent {
-    /*background: #f8f9fa;*/
     padding: 15px;
     border-radius: 8px;
     text-align: center;

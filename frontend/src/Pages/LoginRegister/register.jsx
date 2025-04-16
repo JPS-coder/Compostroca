@@ -26,26 +26,12 @@ function Register() {
         setRedirectTo('/menu');
         setModalVisible(true);
     }
-       // const cadastroSimulado = true;
 
-       // if (cadastroSimulado) {
-        //   setModalVisible(true)
-         //  console.log("Exibindo mensagem de cadastro");
-          // showMessage("register", "Cadastro realizado com sucesso!");
-    
-
-        // simulacao do tempo de resposta do servidor
-       // setTimeout(() => {
-        //    setMensagem('Cadastro realizado com sucesso!');
-        //    setType('success');
-      //  }, 1000)
     
 
     return (
         <div className={`${styles.screenLoginRegister} ${styles.cad}`}>
-            {/*<Messages message={message} type={type} />*/}
             
-            {/* Exibir o modal somente se houver mensagem */}
             <Messages
                 message={message}
                 type={type}
@@ -97,18 +83,6 @@ function Register() {
 
                 <button className={styles.cad} type='submit'>Enviar</button>
             </form>
-
-           
-            {/*exibir modal quando showmessage for true 
-            {modalVisible && (
-                <div className={styles.modal}>
-                    <div className={styles.modalContent}>
-                        <h3>Cadastro realizado com sucesso!</h3>
-                        <p>Muito Obrigado!</p>
-                        <button onClick={() => setModalVisible(false)}></button>
-                    </div>
-                </div>
-            )}*/}
 
         </div>
     );

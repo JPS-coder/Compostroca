@@ -28,7 +28,7 @@ function Reset({ type, onCancel }) {
         setMessage("Senha redefinida com sucesso!");
         setMessageType("success");
         setTimeout(() => {
-            onCancel(); // Fecha o reset após a mensagem
+            onCancel();
         }, 2000);
     }
 

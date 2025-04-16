@@ -106,7 +106,6 @@ function RegisterNewUser() {
                 Já possui uma conta? <Link to ="/login" className={styles.link}>Faça Login</Link>
             </p>
 
-            {/** exibir modal quando showmessage for true */}
             {showMessage && (
                 <Messages
                     type="newUser"

@@ -140,7 +140,6 @@ input::placeholder {
     display: none;
 }
 
-/* Opcional: fundo escuro para destacar o modal */
 .overlay {
     position: fixed;
     top: 0;

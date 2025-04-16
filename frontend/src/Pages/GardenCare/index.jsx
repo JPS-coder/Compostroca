@@ -1,26 +1,24 @@
 import styles from './GardenCare.module.css'
 import { Link } from 'react-router-dom'
+import minVideo from '../../assets/minVideo.png';
 
 const videos = [
         {
         id: 1,
         title: "Dicas para uma horta saudável",
         description: "Cuide de sua horta com essas dicas, para deixá-la saudável e produtiva.",
-        thumbnail: "https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg",
-        url: "https://www.youtube.com/watch?v=VIDEO_ID_1"
+        url: "#"
     },
     {
         id: 2,
         title: "Inseticidas Naturais",
         description: "Aprenda a fazer esse inseticida natural para eliminar pragas e doenças.",
-        thumbnail: "https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg",
         url: "#"
     },
     {
         id: 3,
         title: "Qual tipo solo, você tem na horta?",
         description: "Truques simples para identificar seu solo",
-        thumbnail: "https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg",
         url: "#"
     }
 ];
@@ -38,7 +36,7 @@ function GardenCare() {
                 {videos.map(video => (
                     <div key={video.id} className={styles.videoItem}>
                         <a href={video.url} target="_blank" rel="noopener noreferrer">
-                            <img src={video.thumbnail} alt={video.title} className={styles.thumbnail} />
+                            <img src={minVideo} alt={video.title} className={styles.thumbnail} />
                         </a>
                         <div className={styles.textContent}>
                             <h3>{video.title}</h3>
