@@ -1,0 +1,116 @@
+  .searchBtn {
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--shadow);
+    border-radius: 0.7rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+}
+
+input:focus {
+    border-bottom: 2px solid var(--shadow);
+}
+
+.labelInput {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.labelInput label, .labelInput input  {
+    text-align: left;
+ }
+ 
+ .labelInput input {
+    margin-left: 0;
+ }
+
+ .labelInput > input[type="text"] {
+    padding: 0;
+    font-size: 1rem
+ }
+
+  .photosSection {
+    border: 2px dashed var(--colorText);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .photosSection > h3 {
+    font-weight: 400;
+  }
+
+  .iconRow {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .iconButton {
+    font-size: 1.5rem;
+    color: var(--colorText);
+  }
+  
+  .qrcodePlaceholder {
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+    border-radius: 0.7rem;
+  }
+  
+  .addPhotoButton {
+    background: none;
+    border: none;
+    color: #b49a6d;
+    cursor: pointer;
+  }
+
+  .deliveryInfo {
+    text-align: left;
+  }
+
+  .summaryPhotos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .photoSummaryRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .photoThumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .photoTitle {
+    font-weight: 500;
+  }
+  
+  

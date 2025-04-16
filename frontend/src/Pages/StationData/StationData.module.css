@@ -1,7 +1,3 @@
-.stationdata {
-    font-size: 0.9rem;
-}
-
 .inputForm {
     position: relative;
     margin: 0.5rem;
@@ -23,7 +19,7 @@ input:focus {
 .labelInput {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: end;
+    align-items: center;
     width: 100%;
     gap: 0.5rem;
 }
@@ -36,8 +32,6 @@ input:focus {
  .labelInput input {
     margin-left: 0;
  }
-
-
 
  /* viewStationData*/
 
