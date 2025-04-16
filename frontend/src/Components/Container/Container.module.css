@@ -7,7 +7,7 @@
     align-items: center;
     padding-top: 1rem;
     gap: 1rem;
-    color: var(--colorText);
+    color: var(--Text);
     overflow-x: hidden;
     justify-content: center;
 }
@@ -32,14 +32,14 @@
 }
 
 .container h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--colorText);
+    font-weight: bolder;
 }
 
 .container a {
     text-decoration: none;
     padding: 1rem 0;
-    /*border: 1px solid white;
-    border-radius: 0.5rem;*/
     transition: all 0.3s ease;
     color: var(--colorText);
     font-weight: bolder;
@@ -49,7 +49,6 @@
     color: var(--shadow);
    
 }
-
 
 button {
     width: auto;

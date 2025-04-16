@@ -38,7 +38,7 @@ const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase()) || loca
                 <nav
                 className={`${styles.menuSandwich} ${ showMenu ? styles.show : ''}`}
                 >
-                    <Link to="/Menu">Home</Link> 
+                    <Link to="/Menu">Menu</Link> 
                     <Link to="/" onClick={() => setShowMenu(false)}>Informaçôes</Link>
                     <Link to="/edit" onClick={() => setShowMenu(false)}>Editar Dados</Link>
                     <Link to="/OrganicDelivery" onClick={() => setShowMenu(false)}>Entrega de Resíduos</Link>

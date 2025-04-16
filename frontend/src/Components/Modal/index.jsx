@@ -10,7 +10,7 @@ const Modal = ({ children, onClose }) => {
                 {children}
             </div>
         </>,
-        document.body // O modal será inserido no <body>, fora do fluxo da página
+        document.body 
     );
 };
 
