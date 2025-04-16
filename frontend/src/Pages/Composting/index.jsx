@@ -1,6 +1,6 @@
 import styles from './Composting.module.css'
 import { Link } from 'react-router-dom'
-import minVideo from '../../assets/minVideo.png';
+import minVideo from '../../assets/images/minVideo.png';
 
 const videos = [
     {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from '../../assets/logotipo.svg';
+import logo from '../../assets/images/logotipo.svg';
 import styles from './Messages.module.css'
 
 function Messages({ message, extraMessage, type, onClose, actionText, onAction, children }) {

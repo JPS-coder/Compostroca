@@ -1,6 +1,6 @@
 import styles from './GardenCare.module.css'
 import { Link } from 'react-router-dom'
-import minVideo from '../../assets/minVideo.png';
+import minVideo from '../../assets/images/minVideo.png';
 
 const videos = [
         {
@@ -30,7 +30,7 @@ function GardenCare() {
     return (
         <div className={styles.garden}>
             <div>
-                <h1>Guia da Horta</h1>
+                <h2>Guia da Horta</h2>
             </div>
             <div className={styles.videoList}>
                 {videos.map(video => (

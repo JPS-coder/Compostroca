@@ -13,14 +13,18 @@
     justify-items: center;
 }
 
+.cards > a {
+    padding: 1rem 0;
+}
+
 .card {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     padding: 1.3rem;
-    border: 1px solid white;
-    border-radius: 8px;
+    border: 1px solid var(--colorText);
+    border-radius: 0.5rem;
     box-shadow: 0 4px 6px var(--shadow);
     transition: transform 0.3s ease;
     color: var(--text);
