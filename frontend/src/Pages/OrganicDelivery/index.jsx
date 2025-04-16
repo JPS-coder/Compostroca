@@ -19,7 +19,7 @@ function OrganicDelivery() {
         setShowSummary(true);
     };
 
-    const handleConfirmDelivery = async () => {
+    /*const handleConfirmDelivery = async () => {
         setMessage(
             <>
                 Escaneamento <br />bem sucedido
@@ -27,7 +27,7 @@ function OrganicDelivery() {
             </>
         );
         setType('success');
-    };
+    };*/
     
     return (
         <div className={styles.delivery}>

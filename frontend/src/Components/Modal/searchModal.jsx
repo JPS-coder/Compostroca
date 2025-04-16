@@ -12,7 +12,7 @@ const SearchModal = ({ onClose, onSelect }) => {
 
         if (onSelect) {
           onSelect(searchName)
-          onClose(); // fecha o modal
+          onClose();
         } else {
           navigate(`/stationData/view/${searchName}`);
           onClose();

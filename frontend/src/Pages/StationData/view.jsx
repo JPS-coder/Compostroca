@@ -14,7 +14,7 @@ function View() {
     }
     return (
         <div>
-            <h1>Dados da Estação</h1>
+            <h2>Dados da Estação</h2>
             <ViewStationData data={dataStation} />
         </div>
     );

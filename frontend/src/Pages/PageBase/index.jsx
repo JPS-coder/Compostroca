@@ -9,8 +9,7 @@ import background from '../../assets/background.svg'
 function PageBase() {
     return(
         <main className={styles.backgroundWrapper}>
-            {/*<div className={styles.backgroundImage}></div> */}
-            
+                      
             <Header />
             <Container>
                 <Outlet />
