@@ -7,7 +7,7 @@ const videos = [
         title: "Dicas para uma horta saudável",
         description: "Cuide de sua horta com essas dicas, para deixá-la saudável e produtiva.",
         thumbnail: "https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg",
-        url: "#"
+        url: "https://www.youtube.com/watch?v=VIDEO_ID_1"
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ const videos = [
     }
 ];
 
-const channelUrl = "#"; // Link do canal!
+const channelUrl = "#"; // 🔹 Substitua pelo link do canal!
 
 
 function GardenCare() {
