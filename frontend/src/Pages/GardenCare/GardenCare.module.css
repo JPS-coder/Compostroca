@@ -30,7 +30,6 @@
     transform: scale(1.05);
 }
 
-
 .thumbnail {
     width: 100%;
     height: auto;
@@ -61,5 +60,9 @@
 
 .btngarden button {
     font-size: 0.9rem;
+}
+
+.moreLink {
+    padding-bottom: 0;
 }
 

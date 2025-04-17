@@ -3,7 +3,7 @@ import Container from '../../Components/Container'
 import Footer from '../../Components/Footer'
 import { Outlet } from 'react-router-dom'
 import styles from './PageBase.module.css'
-import background from '../../assets/background.svg'
+
 
 
 function PageBase() {
@@ -15,7 +15,7 @@ function PageBase() {
                 <Outlet />
             </Container>
             <Footer />
-           
+    
         </main>
     )
 }
