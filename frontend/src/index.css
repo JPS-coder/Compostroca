@@ -10,7 +10,7 @@
 
 
 body {
-  background-color: var(--backgroud);
+ /* background-color: var(--backgroud);*/
   font-family: var(--font-pattern);
   min-height: 100vh;
   display: flex;
