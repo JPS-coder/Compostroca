@@ -32,7 +32,7 @@ function Composting() {
     return (
         <div className={styles.composting}>
             <div>
-                <h1>Compostagem</h1>
+                <h2>Compostagem</h2>
             </div>
             <div className={styles.videoList}>
                 {videos.map(video => (

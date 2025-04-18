@@ -13,13 +13,13 @@ const categories = {
     nutrition: [
         { id: 2, title: "Como reduzir o consumo de açúcar" },
         { id: 3, title: "Dicas para uma dieta equilibrada" },
-        { id: 4, title: "Alimentos ricos em fibras" },
+        //{ id: 4, title: "Alimentos ricos em fibras" },
         
     ],
     recipe: [
         { id: 7, title: "Pão caseiro sem fermento" },
         { id: 8, title: "Salada de quinoa com legumes" },
-        { id: 9, title: "Sopa detox para o inverno" },
+        //{ id: 9, title: "Sopa detox para o inverno" },
     ]
 };
 
@@ -27,7 +27,6 @@ function Cooking() {
     return (
         <div className={styles.cooking}>
 
-            <h1>Alimentação e Receitas</h1>
             <div className={styles.mainContent}>
                     <h2>{latestPost.title}</h2>
                     <p>{latestPost.summary}</p>

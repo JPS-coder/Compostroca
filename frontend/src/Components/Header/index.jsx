@@ -21,7 +21,7 @@ function Header() {
     }, [location.pathname]);
 
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${isLogoOnly ? styles.headerCenter : ''}`}>
         
             <div className={styles.img}><img className={isLogoOnly ? styles.logoCenter : styles.logo} src={logo} alt='Logotipo compostroca'/></div>
             

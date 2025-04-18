@@ -3,13 +3,9 @@
     flex-direction: column; 
 }
 
-.cooking h1 {
-    font-size: 1.5rem;
-}
-
 .cooking > div:first-child {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .mainContent h2 {
@@ -39,7 +35,6 @@
     font-size: 0.9rem;
 }
 
-
 /* Layout principal (Mobile-first: uma coluna) */
 .container {
     display: flex;
@@ -56,12 +51,11 @@
     text-align: center;
 }
 
-
 /* Sidebar */
 .sidebar {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0.7rem;
 }
 
 .btnContainer {

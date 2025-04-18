@@ -1,18 +1,15 @@
 .container {
     position: relative;
     width: 100%;
-    min-height: 28rem;
+    min-height: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*padding-top: 1rem;*/
     gap: 1rem;
-    /*color: var(--Text);*/
     overflow-x: hidden;
     justify-content: center;
-    
 }
-
+/*
 .container::before {
     content: '';
     position: absolute;
@@ -21,12 +18,26 @@
     width: 100%;
     height: 100%;
     min-height: inherit;
-    background: url('../../assets/images/background.svg') center / contain no-repeat;
+   background: url('../../assets/images/background.svg') center center no-repeat;
+   background-size: contain;
+   background-color: var(--background);
     opacity: 0.3; 
     z-index: -10;
-}
+}*/
 
-  
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    max-width: 48rem;
+    min-height: inherit;
+    object-fit: contain;
+    opacity: 0.3;
+    z-index: -10;
+    pointer-events: none;
+}
 
 .container h1 {
     font-size: 1.8rem;
@@ -36,8 +47,7 @@
 
 .container h2 {
     font-size: 1.4rem;
-    /*color: var(--colorText);*/
-    font-weight: 700;
+    color: var(--colorText); 
 }
 
 .container a {
@@ -55,11 +65,10 @@
 button {
     width: auto;
     padding: 0.5rem;
-    margin: 1.5rem auto;
+    margin: 1rem auto;
     background-color: var(--colorText);
     border: none;
     border-radius: 1.25rem;
     cursor: pointer;
     font-size: 1.3rem;
-    font-weight: 500;
 }

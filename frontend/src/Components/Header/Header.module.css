@@ -9,6 +9,11 @@
     z-index: 10;   
 }
 
+.headerCenter {
+    justify-content: center;
+    margin: 0;
+}
+
 .logo {
     width: auto;
     max-width: 12rem;
@@ -17,7 +22,7 @@
 .logoCenter {
     width: auto;
     max-width: 14rem;
-    margin-left: 1rem;
+
 }
 
 .menuSandwich {
