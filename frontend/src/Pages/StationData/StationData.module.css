@@ -9,7 +9,7 @@ input {
     border: none;
     border-bottom: 2px solid #ccc;
     outline: none;
-    background: transparent;
+    background: transparent; 
 }
 
 input:focus {
@@ -30,6 +30,7 @@ input:focus {
   
  .labelInput input {
     margin-left: 0;
+    
  }
 
  /* viewStationData*/

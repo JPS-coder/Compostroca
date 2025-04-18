@@ -11,7 +11,7 @@
 .videoList {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 1rem;
     gap: 0.5rem !important;
 }
 
