@@ -6,7 +6,7 @@ function PostPage() {
     const navigate = useNavigate();
 
     return (
-        <div style={{ padding: "20px", textAlign: "center" }}>
+        <div >
             <h1>Post {id}</h1>
             <p>Aqui será exibido o conteúdo completo do post com ID {id}.</p>
             <div className={styles.back}>

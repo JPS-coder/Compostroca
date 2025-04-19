@@ -34,7 +34,6 @@
 }
 
 
-
 * { 
   margin: 0;
   padding: 0;
@@ -45,10 +44,14 @@
 
 body {
   background-color: var(--backgroud);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
 }
 
