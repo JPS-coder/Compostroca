@@ -39,7 +39,7 @@ function StationData () {
         console.log("Dados simulados para envio:", data)
 
         try {
-             await axios.post("http://localhost:3000/api/stationdata", data);
+             await axios.post("http://localhost:3000/stationdata", data);
             setMessage("Dados salvos com sucesso!");
             setShowMessage(true);
             

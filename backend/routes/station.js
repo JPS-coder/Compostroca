@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 })
  
 
-router.get('/name/:nameStation', async (req, res) => {
+router.get('/:nameStation', async (req, res) => {
     const { nameStation } = req.params;
   
     try {
@@ -37,33 +37,6 @@ router.get('/name/:nameStation', async (req, res) => {
     } catch (error) {
       console.error('Erro ao buscar estação:', error.message);
       res.status(500).json({ message: 'Erro ao buscar estação.' });
-    }
-  });
-  
-
-router.get('/:id', async (req, res) => {
-    try {
-        const query = 'SELECT * FROM station_data WHERE Id =$1';
-        const result = await pool.query(query, [id]);
-
-        if (result.rows.length === 0) {
-            return res.status(404).json({ message: 'Estaçao não encontrada'});
-        }
-
-        res.status(200).json(result.rows[0]);  
-    } catch (error) {
-        console.error('Erro ao buscar dados da estaçao:', error.message);
-        res.status(500).json({ message: 'Erro ao buscar dados da estação.' });
-    }
-})
-
-
-router.get('/', async (req, res) => {
-    try {
-      const result = await pool.query('SELECT * FROM station_data');
-      res.json(result.rows);
-    } catch (error) {
-      res.status(500).json({ message: 'Erro ao buscar estações.' });
     }
   });
   

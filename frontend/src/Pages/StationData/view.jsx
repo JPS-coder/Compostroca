@@ -2,20 +2,28 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ViewStationData from './viewStationData';
-import { useActionState } from 'react';
 
 function View() {
-    const { id } = useParams();
+    const { name } = useParams();
 
-    const {dataStation, setDataStation} = useState(null);
+    const [dataStation, setDataStation] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const formatStationData = (data) => ({
+        nameStation: data.name_station,
+        volStation: data.vol_station,
+        volPerson: data.vol_person,
+        volTotal: data.vol_total,
+        co2Avoided: data.co2_avoided,
+      });
 
     useEffect (()=> {
         const fetchStationData = async () => {
             try {
-               const response = await useActionState.get(`http://localhost:3000/station/${id}`);
-               setDataStation(response.data); 
+               const response = await axios.get(`http://localhost:3000/stationdata/${name}`);
+               setDataStation(formatStationData(response.data));
+               
             } catch (err) {
                 setError('Erro ao carregar dados da estação');
                 console.error(err);
@@ -25,7 +33,7 @@ function View() {
         };
 
         fetchStationData();
-    }, [id])
+    }, [name])
 
     if (loading) {
         return<div>Carregando....</div>;

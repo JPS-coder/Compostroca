@@ -2,6 +2,8 @@ import styles from './GardenCare.module.css'
 import { Link } from 'react-router-dom'
 import minVideo from '../../assets/images/minVideo.png';
 
+// Dados simulados, serao substituidos pelos 3 ultimos videos postados no youtube
+// Refatorar para deixar dinamico, usar API do Yoube obtendo uma chave.
 const videos = [
         {
         id: 1,
