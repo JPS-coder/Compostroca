@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
 import wasteRoutes from './routes/waste.js';
+import stationRoutes from './routes/station.js'
 
 
 
@@ -17,6 +18,7 @@ app.use(cors()); // habilita o cors, p/ aceitar requisições de diferentes orig
 
 app.use('/auth', authRoutes);
 app.use('/waste', wasteRoutes);
+app.use('/station', stationRoutes)
 // definição de rota, objeto de requisição e de resposta
 
 app.get('/', (req, res) => {

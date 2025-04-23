@@ -25,9 +25,9 @@
 
 :root {
   --font-pattern: 'Futura', sans-serif;
-  --backgroud: rgba(249, 241, 228);
+  --backgroud: beige;
   --colorText: rgb(167, 143, 102);
-  --shadow: rgb(114, 90, 49);
+  --shadow: #725a31;
   --text: rgba(0, 0, 0, 0.822);
   --colorLogo: rgb(21, 141, 68);
 

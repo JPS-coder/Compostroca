@@ -1,7 +1,8 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './StationData.module.css';
 import SearchModal from '../../Components/Modal/searchModal';
+import axios from 'axios';
 
 function ViewStationData({ data }) {
   const [showSearchModal, setShowSearchModal] = useState('');  

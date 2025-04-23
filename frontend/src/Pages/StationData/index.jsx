@@ -3,6 +3,7 @@ import styles from './StationData.module.css'
 import { useNavigate, Link } from "react-router-dom";
 import Messages from '../../Components/Messages';
 import SearchModal from '../../Components/Modal/searchModal';
+import axios from 'axios'
 
 function StationData () {
     const [nameStation, setNameStation] = useState('');
@@ -38,7 +39,7 @@ function StationData () {
         console.log("Dados simulados para envio:", data)
 
         try {
-            // await axios.post("http://localhost:3000/api/stationdata", data);
+             await axios.post("http://localhost:3000/api/stationdata", data);
             setMessage("Dados salvos com sucesso!");
             setShowMessage(true);
             

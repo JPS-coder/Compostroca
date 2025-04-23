@@ -43,12 +43,9 @@
 
 p {
     text-align: left;
+    
 }
 
-.container h1, h2, h3 {
-    color: var(--colorText);
-    font-weight: 700;
-}
 
 .container a {
     text-decoration: none;

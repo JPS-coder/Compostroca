@@ -11,6 +11,7 @@
     gap: 0.5rem !important;
 }
 
+
 .videoItem {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -25,6 +26,7 @@
 .videoItem:hover {
     transform: scale(1.05);
 }
+
 
 .thumbnail {
     width: 80%;
