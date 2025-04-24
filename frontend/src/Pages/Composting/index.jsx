@@ -53,10 +53,10 @@ function Composting() {
             </div>
 
             <div className={styles.btncomp}>
-                <Link to="/GardenCare">
+                <Link to="/guia-da-horta">
                     <button>Guia da Horta</button>
                 </Link>
-                <Link to="/Cooking">
+                <Link to="/alimentacao-receitas">
                     <button>Alimentação e receitas</button>
                 </Link>
             </div>

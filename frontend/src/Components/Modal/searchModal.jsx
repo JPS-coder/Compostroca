@@ -14,7 +14,7 @@ const SearchModal = ({ onClose, onSelect }) => {
           onSelect(searchName)
           onClose();
         } else {
-          navigate(`/stationData/view/${searchName}`);
+          navigate(`/dados-estacao/visualizar/${searchName}`);
           onClose();
         }
       };

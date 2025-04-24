@@ -24,18 +24,18 @@ function AppRoutes() {
                 <Route path='/' element={ <PageBase /> } >
                     <Route index element={ <Home /> } />
                     <Route path="/login" element={ <Login/> } />
-                    <Route path="/register" element={ <Register/> } />
-                    <Route path="/registerNewUser" element={ <RegisterNewUser/> } />
-                    <Route path="/edit" element={ <Edit/> } />
-                    <Route path="/stationData" element={ <StationData/> } />
+                    <Route path="/cadastro" element={ <Register/> } />
+                    <Route path="/cadastro-novo-usuario" element={ <RegisterNewUser/> } />
+                    <Route path="/editar-dados" element={ <Edit/> } />
+                    <Route path="/dados-estacao-cadastro" element={ <StationData/> } />
                     <Route path="/menu" element={ <Menu/> } />
-                    <Route path="/organicDelivery" element={ <OrganiciDelivery/> } />
-                    <Route path="/composting" element={ <Composting/> } />
-                    <Route path="/gardenCare" element={ <GardenCare/> } />
-                    <Route path="/cooking" element={ <Cooking/> } />
+                    <Route path="/entrega-residuos" element={ <OrganiciDelivery/> } />
+                    <Route path="/compostagem" element={ <Composting/> } />
+                    <Route path="/guia-da-horta" element={ <GardenCare/> } />
+                    <Route path="/alimentacao-receitas" element={ <Cooking/> } />
                     <Route path="/post/:id" element={<PostPage />} />
-                    <Route path="/category/:categoryName" element={<CategoryPage />} />
-                    <Route path="/stationData/view/:name" element={<View />} />
+                    <Route path="/categoria/:categoryName" element={<CategoryPage />} />
+                    <Route path="/dados-estacao/visualizar/:name" element={<View />} />
                     <Route path="/testRoute" element={<TestRoute />} />
                 </Route>
             </Routes>

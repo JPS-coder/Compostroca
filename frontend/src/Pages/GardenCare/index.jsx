@@ -52,11 +52,11 @@ function GardenCare() {
                 </a>
             </div>
             <div className={styles.btngarden}>
-                <Link to="/Composting">
+                <Link to="/compostagem">
                     <button>Compostagem</button>
                 </Link>
          
-                <Link to="/Cooking">
+                <Link to="/alimentacao-receitas">
                     <button>Alimentação e Receitas</button>
                 </Link>
 

@@ -20,7 +20,7 @@ function RegisterNewUser() {
 
             setMessage(
                 <>
-                    <p><Link to='/register'>Clique Aqui para</Link></p>
+                    <p><Link to='/cadastro'>Clique Aqui para</Link></p>
                     <p>completar seu</p>
                     <p>cadastro e </p>
                     Explore o que <br /> preparamos para <br /> você.

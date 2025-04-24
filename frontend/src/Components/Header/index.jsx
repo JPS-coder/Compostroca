@@ -42,9 +42,9 @@ function Header() {
                 >
                     <Link to="/Menu">Menu</Link> 
                     <Link to="/" onClick={() => setShowMenu(false)}>Informaçôes</Link>
-                    <Link to="/edit" onClick={() => setShowMenu(false)}>Editar Dados</Link>
-                    <Link to="/OrganicDelivery" onClick={() => setShowMenu(false)}>Entrega de Resíduos</Link>
-                    <Link to="/StationData" onClick={() => setShowMenu(false)}>Dados da Estação</Link>    
+                    <Link to="/editar-dados" onClick={() => setShowMenu(false)}>Editar Dados</Link>
+                    <Link to="/entrega-residuos" onClick={() => setShowMenu(false)}>Entrega de Resíduos</Link>
+                    <Link to="/dados-estacao-cadastro" onClick={() => setShowMenu(false)}>Dados da Estação</Link>    
                 </nav>
             </>
     )}

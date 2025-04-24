@@ -37,11 +37,11 @@ function Cooking() {
                         
             <div className={styles.btncook}>
 
-                <Link to="/Composting">
+                <Link to="/compostagem">
                     <button>Compostagem</button>
                 </Link>
                     
-                <Link to="/GardenCare">
+                <Link to="/guia-da-horta">
                     <button>Guia da Horta</button>
                 </Link>
 
