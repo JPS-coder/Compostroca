@@ -27,8 +27,6 @@ DB_NAME=nome_do_seu_banco
 DB_PORT=5432
 ```
 
-### Criar 
-
 ### Rodar servidor
 - node server.js
 
