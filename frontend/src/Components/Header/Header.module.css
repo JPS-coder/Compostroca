@@ -21,7 +21,6 @@
 .logoCenter {
     width: auto;
     max-width: 14rem;
-
 }
 
 .menuSandwich {
@@ -95,7 +94,6 @@
     top: -8px;
 }
 
-
 .header span {
     font-size: 1.5rem;
     font-weight: bold;
@@ -103,13 +101,13 @@
 
 .header a {
     text-decoration: none;
-    color: var(--colorText);
+    color: var(--text);
     padding-right: 1.5rem;
     font-size: 1.125rem;
 }
 
 .header a:hover {
-    color: var();
+    color: var(--colorLogo);
 }
 
 @media (min-width: 800px) {

@@ -19,16 +19,6 @@ function OrganicDelivery() {
         setShowSummary(true);
     };
 
-    /*const handleConfirmDelivery = async () => {
-        setMessage(
-            <>
-                Escaneamento <br />bem sucedido
-                <p>Entrega<br /> confirmada</p>
-            </>
-        );
-        setType('success');
-    };*/
-    
     return (
         <div className={styles.delivery}>
             {message && (
@@ -70,7 +60,7 @@ function OrganicDelivery() {
 
                     {showSearch && (
                         <SearchModal onClose={() => setShowSearch(false)}
-                        onSelect={(name) => setStation(name)} // Exemplo de função para preencher o campo
+                        onSelect={(name) => setStation(name)} 
                         mode="fill" />
                     )}
                 </>
@@ -96,10 +86,11 @@ function OrganicDelivery() {
                     </div>
 
                     <div className={styles.qrcodePlaceholder}>
-                        {/* Aqui vai o componente de QRCode real */}
                         <p>[ QR Code para confirmação ]</p>
                     </div>
+                    
                     {/*
+                    Decidir se vai colocar um botao de confirmar (como o ex. abaixo) ou o qrcode
                     <button onClick={handleConfirmDelivery} className={styles.confirmBtn}>
                         Confirmar Entrega
                     </button>*/}

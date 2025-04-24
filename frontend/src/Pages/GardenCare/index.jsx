@@ -25,7 +25,7 @@ const videos = [
     }
 ];
 
-const channelUrl = "#"; // 🔹 Substitua pelo link do canal!
+const channelUrl = "#"; // Não esquecer de substituir pelo link do youtube
 
 
 function GardenCare() {
@@ -38,7 +38,7 @@ function GardenCare() {
                 {videos.map(video => (
                     <div key={video.id} className={styles.videoItem}>
                         <a href={video.url} target="_blank" rel="noopener noreferrer">
-                            <img src={minVideo} alt={video.title} className={styles.thumbnail} />
+                            <img src={minVideo} alt={video.title} className={styles.miniVideo} />
                         </a>
                         <div className={styles.textContent}>
                             <h3>{video.title}</h3>

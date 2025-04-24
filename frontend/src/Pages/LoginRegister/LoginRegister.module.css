@@ -121,7 +121,7 @@ input::placeholder {
 }
 
 .resetContainer {
-    position: fixed; /* Faz com que o modal fique sobre a página */
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -132,7 +132,7 @@ input::placeholder {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     z-index: 1000;
-    display: none; /* Por padrão, o modal não aparece */
+    display: none;
 }
 
 .show {

@@ -49,7 +49,6 @@ p {
 
 .container a {
     text-decoration: none;
-    /*padding: 1rem 0;*/
     transition: all 0.3s ease;
     color: var(--colorText);
     font-weight:700;

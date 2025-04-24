@@ -3,7 +3,6 @@ import pool from '../database.js';
 
 const router = express.Router();
 
-// Definiçao das rotas de resíduos
 router.post('/waste', async (req, res) => {
     const { type, description } = req.body;
     try {
@@ -19,7 +18,6 @@ router.post('/waste', async (req, res) => {
     }
 });
 
-// Rota para listar resíduos
 router.get('/waste', async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM waste');

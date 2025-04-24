@@ -4,11 +4,9 @@ import pool from '../database.js';
 
 const router = express.Router();
 
-// Definição das rotas
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
     try {
-        // Verifica se o usuário existe no banco
         const result = await pool.query(
             'SELECT * FROM users WHERE email = $1 AND password = $2',
             [email, password]
@@ -24,18 +22,15 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// Rota de Registro
 router.post('/register', async (req, res) => {
     const { name, email, password } = req.body;
     try {
-        // Verifica se o usuário já existe
         const existingUser = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
         
         if (existingUser.rows.length > 0) {
             return res.status(400).json({ message: 'Usuário já existe' });
         }
 
-        // Cadastra o novo usuário
         const result = await pool.query(
             'INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *',
             [name, email, password]

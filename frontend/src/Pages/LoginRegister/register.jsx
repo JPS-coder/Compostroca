@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './LoginRegister.module.css';
-//import { useMessage } from "../../Components/Messages/index"
 import Messages from '../../Components/Messages';
 
 
@@ -36,10 +35,10 @@ function Register() {
                 message={message}
                 type={type}
                 onClose={() => setMessage(null)}
-                //actionText="Ir para o Login"
-                //onAction={() => console.log('Redirecionando para login...')}
             />
+
             <h2 className={styles.title}>Cadastro</h2>
+            
             <form onSubmit={handleRegister}>
                 <div className={styles.inputForm}>
                     <div className={styles.labelInput}>

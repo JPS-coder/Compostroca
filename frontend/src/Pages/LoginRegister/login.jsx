@@ -13,7 +13,7 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
 
-       // simulacao tempo de resposta api
+       // simulacao tempo de resposta do servidor para teste em desenvolvimento
        setTimeout(() => {
         console.log("Login bem-sucedido (simulação)");
         navigate("/menu");  // Redireciona para a página "home"
@@ -72,15 +72,6 @@ function Login() {
                         Esqueci a Senha
                     </button>
                     </div>
-                {/*
-                <div className={styles.paragraph}>
-                    <p className={styles.msg} onClick={() => setResetType("firstAccess")}>
-                        Primeiro Acesso
-                    </p>
-                    <p className={styles.msg} onClick={() => setResetType('forgotPassword')}>
-                        Esqueci a Senha
-                    </p>
-                </div>*/}
                 
                 
                 <button className={styles.btnAccess} type="submit">Acessar</button>          

@@ -1,6 +1,5 @@
 import { React, useState } from 'react';
 import styles from './StationData.module.css'
-import { useNavigate, Link } from "react-router-dom";
 import Messages from '../../Components/Messages';
 import SearchModal from '../../Components/Modal/searchModal';
 import axios from 'axios'
@@ -22,7 +21,7 @@ function StationData () {
         setVolPerson('');
         setVolTotal('');
         setCO2Avoided('');
-        setShowMessage(false); // fecha o modal
+        setShowMessage(false);
       };
     
     const handleStationData = async (e) => {

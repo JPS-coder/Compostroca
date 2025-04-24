@@ -15,7 +15,7 @@ function Edit() {
     const handleEdit = async (e) => {
         e.preventDefault();
 
-        // simular tempo de resposta ddo servidor
+        // simular tempo de resposta do servidor para teste em desenvolvimento
         setMessage(
             <>
                 Dados salvos <br/>com sucesso.

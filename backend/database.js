@@ -1,10 +1,9 @@
 import pkg from 'pg';
 import dotenv from 'dotenv';
 
-dotenv.config(); //carrega variáveis definidas em .env
+dotenv.config(); 
 
-const { Pool } = pkg; // pool gerencia conexoes, reutiliza conexoes, sem abrir/fechar toda vez que uma consulta é feita
-
+const { Pool } = pkg; 
 const pool = new Pool({
     user: process.env.DB_USER,
     host: process.env.DB_HOST,
@@ -13,8 +12,5 @@ const pool = new Pool({
     port: process.env.DB_PORT,
 })
 
-/*pool.connect() // testa a conexão
-    .then(() => console.log('PostgreSQL conectado com sucesso!'))
-    .catch(err => console.error('Erro ao conectar no PostgreSQL:', err.message));
-*/
+
 export default pool;

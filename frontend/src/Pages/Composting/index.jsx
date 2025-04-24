@@ -10,25 +10,22 @@ const videos = [
     id: 1,
     title: "O que é compostagem?",
     description: "Conheça esse processo biológico que se decompõe e se transforma em um adubo natural",
-    //thumbnail: "https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg",
     url: "#"
 },
 {
     id: 2,
     title: "Tipos de Compostagem",
     description: "Conheça os 4 tipos de compostagem e aprenda como produzí-la.",
-    //thumbnail: "https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg",
     url: "#"
 },
 {
     id: 3,
     title: "Benefícios da Compostagem" ,     description: "Descobra os beneficios da compostagem para o meio ambiente",
-    //thumbnail: "https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg",
     url: "#"
 }
 ];
 
-const channelUrl = "https://www.youtube.com/@SeuCanal";
+const channelUrl = "https://www.youtube.com/@SeuCanal"; // não esquecer de colocar o link do canal do youtube
 
 
 function Composting() {
@@ -41,7 +38,7 @@ function Composting() {
                 {videos.map(video => (
                     <div key={video.id} className={styles.videoItem}>
                         <a href={video.url} target="_blank" rel="noopener noreferrer">
-                            <img src={minVideo} alt={video.title} className={styles.thumbnail} />
+                            <img src={minVideo} alt={video.title} className={styles.miniVideo} />
                         </a>
                         <div className={styles.textContent}>
                             <h3>{video.title}</h3>

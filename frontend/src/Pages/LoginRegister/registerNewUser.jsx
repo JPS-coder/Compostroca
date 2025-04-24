@@ -18,30 +18,6 @@ function RegisterNewUser() {
     const handleRegisterNewUser = async (e) => {
         e.preventDefault();
 
-        /*
-        if (password !== confirmPassword) {
-            setErrorMessage('As senhas não coincidem!');
-            return;
-        }
-        
-        try {
-            const response = await axios.post('http://localhost:3000/auth/register', { email, password });
-            console.log('Cadastro realizado', response.data);
-
-            //adicionado
-            // exibe mensagem de sucesso
-            setShowMessage(true);
-
-            setTimeout(() => {
-                setShowMessage(false);
-                navigate('/');
-            }, 3000)
-
-            //navigate('/');
-        } catch (error) {
-            console.error ('Erro ao cadastrar:', error.response?.data || error.message);
-            setErrorMessage('Erro no cadastro. Tente novamente.');
-        }*/
             setMessage(
                 <>
                     <p><Link to='/register'>Clique Aqui para</Link></p>
