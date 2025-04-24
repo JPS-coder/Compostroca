@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Reset.module.css";
-import Messages from "../Messages"; // Certifique-se de ter esse componente
+import Messages from "../Messages"; 
 
 function Reset({ type, onCancel }) {
     const [email, setEmail] = useState("");

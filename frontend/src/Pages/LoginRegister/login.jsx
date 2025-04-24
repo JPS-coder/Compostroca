@@ -57,13 +57,30 @@ function Login() {
                     />
                 </div>
                 <div className={styles.paragraph}>
+                    <button
+                        className={styles.msg}
+                        onClick={() => setResetType("firstAccess")}
+                        type="button"
+                    >
+                        Primeiro Acesso
+                    </button>
+                    <button
+                        className={styles.msg}
+                        onClick={() => setResetType("forgotPassword")}
+                        type="button"
+                    >
+                        Esqueci a Senha
+                    </button>
+                    </div>
+                {/*
+                <div className={styles.paragraph}>
                     <p className={styles.msg} onClick={() => setResetType("firstAccess")}>
                         Primeiro Acesso
                     </p>
                     <p className={styles.msg} onClick={() => setResetType('forgotPassword')}>
                         Esqueci a Senha
                     </p>
-                </div>
+                </div>*/}
                 
                 
                 <button className={styles.btnAccess} type="submit">Acessar</button>          

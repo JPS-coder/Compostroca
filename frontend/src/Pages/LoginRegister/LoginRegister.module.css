@@ -48,6 +48,7 @@ input::placeholder {
     color: var(--colorText);
 }
 .msg {
+    all: unset;
     color: var(--colorText);
     opacity: 0.9;
     text-align: right;
@@ -56,6 +57,7 @@ input::placeholder {
 }
 
 .msg:hover {
+    all: unset;
     color: var(--text);
 }
 
