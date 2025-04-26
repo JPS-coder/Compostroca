@@ -1,3 +1,6 @@
+.composting {
+    width: 100%;
+}
 .composting > div:first-child {
     text-align: center; 
     margin-top: 1rem;
@@ -56,4 +59,26 @@
 .btncomp button {
     font-size: 0.9rem;
     margin-inline:0.2rem;
+}
+
+@media (min-width: 768px) {
+    .textContent h3 {
+        font-size: 1.5rem;;
+    }
+
+    .textContent p {
+        font-size: 1.2rem;
+    }
+
+    .miniVideo {
+        width: 60%;
+    }
+
+    .btncomp {
+        justify-content: space-evenly;   
+    }
+
+    .btncomp button {
+        font-size: 1rem;
+    }
 }

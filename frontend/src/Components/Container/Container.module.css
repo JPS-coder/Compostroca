@@ -34,7 +34,8 @@
 }
 
 .container h2 {
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
+    text-align: center;
 }
 
 .container h3, p {
@@ -43,7 +44,6 @@
 
 p {
     text-align: left;
-    
 }
 
 
@@ -66,7 +66,7 @@ button {
     border: none;
     border-radius: 1.25rem;
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 @media (min-width: 430px) {
@@ -76,9 +76,7 @@ button {
 }
 
 @media (min-width: 768px) {
-    .container {
-        max-width: 32rem;
-    }
+   
 
     .container h1 {
         font-size: 1.8rem;

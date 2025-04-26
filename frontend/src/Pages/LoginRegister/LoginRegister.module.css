@@ -1,5 +1,6 @@
 .screenLoginRegister {
     width: 100%;
+    max-width: 35rem;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
@@ -64,6 +65,10 @@ input::placeholder {
 .paragraph {
     display: flex;
     justify-content: space-between;
+}
+
+.paragraph button {
+    padding-inline: 1rem;
 }
 
 
@@ -153,3 +158,5 @@ input::placeholder {
     z-index: 999;
     
 }
+
+

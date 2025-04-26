@@ -1,4 +1,7 @@
-
+.cooking {
+    width: 100%;
+    padding: 0.5rem
+}
 .cooking > div:first-child {
     text-align: center;
     margin-top: 0.5rem;
@@ -7,7 +10,6 @@
 .btncook {
     display: flex;
     justify-content: space-between;
-    
 }
 
 .btncook button {
@@ -45,5 +47,29 @@
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .mainContent p {
+        font-size: 1.3rem;
+    }
+
+    .mainContent a, .sidebar {
+        font-size: 1.2rem;
+    }
+
+    .sidebar a {
+        color: var(--text);
+    }
+
+    .btncook {
+        justify-content: space-evenly;   
+    }
+
+    .btncook button {
+        font-size: 1rem;
+    }
+
+
 }
 

@@ -1,3 +1,6 @@
+.garden {
+    width: 100%;
+}
 .garden > div:first-child {
     text-align: center;
     margin-top: 1rem;
@@ -62,3 +65,26 @@
     padding-bottom: 0;
 }
 
+@media (min-width: 768px) {
+    .textContent h3 {
+        font-size: 1.5rem;;
+    }
+
+    .textContent p {
+        font-size: 1.2rem;
+    }
+
+    .miniVideo {
+        width: 60%;
+    }
+
+    .btngarden {
+        justify-content: space-evenly;   
+    }
+
+    .btngarden button {
+        font-size: 1rem;
+    }
+    
+    
+}
