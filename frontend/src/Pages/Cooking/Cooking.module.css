@@ -1,7 +1,8 @@
 .cooking {
-    width: 100%;
+    /*width: 100%;*/
     padding: 0.5rem
 }
+
 .cooking > div:first-child {
     text-align: center;
     margin-top: 0.5rem;
@@ -31,7 +32,7 @@
 
 /* Último artigo */
 .mainContent {
-    padding: 15px;
+    padding: 0 1rem;
     border-radius: 8px;
     text-align: center;
 }
@@ -45,11 +46,35 @@
 .btnContainer {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 0.9rem;
+    margin-top: 1.2rem;
 }
 
 @media (min-width: 768px) {
+    .cooking {
+        display: grid;
+        grid-template-columns: 1fr, 2fr;
+    }
+
+    .mainContent {
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .sidebar {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2 ;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 4px var(--shadow);
+    }
+
+    .btncook {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+
     .mainContent p {
         font-size: 1.3rem;
     }
@@ -69,7 +94,5 @@
     .btncook button {
         font-size: 1rem;
     }
-
-
 }
 

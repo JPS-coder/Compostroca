@@ -12,7 +12,7 @@ function Header() {
     };
  
 
-    const noMenuPages = ['/', '/login', '/register', '/menu', '/registerNewUser', '/cooking', '/composting', '/gardencare'];
+    const noMenuPages = ['/', '/login', '/register', '/menu', '/registerNewUser', '/alimentacao-receitas', '/compostagem', '/guia-da-horta'];
 
     const isLogoOnly = noMenuPages.includes(location.pathname.toLowerCase()) || location.pathname.startsWith('/category/') || location.pathname.startsWith('/post/');
 
