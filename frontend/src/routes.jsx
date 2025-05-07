@@ -14,7 +14,8 @@ import Cooking from "./Pages/Cooking";
 import CategoryPage from "./Pages/Cooking/categoryPage"
 import PostPage from "./Pages/Cooking/postPage"
 import View from "./Pages/StationData/view";
-import TestRoute from "./Components/TestRoute";
+import RecipeRegister from "./Pages/Cooking/recipeRegister";
+import Articles from "./Pages/Cooking/articles";
 
 
 function AppRoutes() {
@@ -36,7 +37,9 @@ function AppRoutes() {
                     <Route path="/post/:id" element={<PostPage />} />
                     <Route path="/categoria/:categoryName" element={<CategoryPage />} />
                     <Route path="/dados-estacao/visualizar/:name" element={<View />} />
-                    <Route path="/testRoute" element={<TestRoute />} />
+                    <Route path="/receitas-cadastro" element={<RecipeRegister />} />
+                    <Route path="/alimentacao-cadastro" element={<Articles />} />
+                    
                 </Route>
             </Routes>
         </BrowserRouter>

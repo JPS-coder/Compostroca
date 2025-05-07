@@ -11,6 +11,9 @@
     text-align: left;
     font-weight: 500;
 }
+.category a {
+    color: var(--text);
+}
 
 .viewMore {
     border: 0.1rem solid var(--shadow);

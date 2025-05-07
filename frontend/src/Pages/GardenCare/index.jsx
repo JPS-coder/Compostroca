@@ -25,7 +25,7 @@ const videos = [
     }
 ];
 
-const channelUrl = "#"; // Não esquecer de substituir pelo link do youtube
+const channelUrl = "#"; // Não esquecer de substituir pelo link do youtube (https://youtube.com/playlist?list=PLLbKtSB2EoC4Cn_DBhOaINLsobw8n6cLu&si=UmVOpZqPZVjBI88b)
 
 
 function GardenCare() {

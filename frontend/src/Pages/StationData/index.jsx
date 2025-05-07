@@ -13,7 +13,7 @@ function StationData () {
     const [message, setMessage] = useState('');
     const [showMessage, setShowMessage] = useState(false);
     const [showSearchModal, setShowSearchModal] = useState(false);  
-   
+
 
     const handleNewRegister = () => {
         setNameStation('');
@@ -34,8 +34,6 @@ function StationData () {
             volTotal,
             co2Avoided
         }
-
-        console.log("Dados simulados para envio:", data)
 
         try {
              await axios.post("http://localhost:3000/stationdata", data);

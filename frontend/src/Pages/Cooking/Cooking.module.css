@@ -1,6 +1,11 @@
 .cooking {
-    /*width: 100%;*/
-    padding: 0.5rem
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cooking h2 {
+    font-size: 1.3rem;
 }
 
 .cooking > div:first-child {
@@ -11,11 +16,12 @@
 .btncook {
     display: flex;
     justify-content: space-between;
+    padding-top: 0;
 }
 
 .btncook button {
     font-size: 0.9rem;
-    margin-inline:0.2rem;
+    margin-top: 0;
 }
 
 .categoryPage {
@@ -43,12 +49,49 @@
     gap: 0.7rem;
 }
 
+.sidebar a {
+    font-weight: 500;
+}
+
 .btnContainer {
     display: flex;
     justify-content: center;
     gap: 0.9rem;
     margin-top: 1.2rem;
 }
+
+/*Cadastro de Receitas*/
+.inputForm.recipe, .inputForm.art {
+    display: flex;
+    text-align: left;
+}
+
+.recipe .labelInput, .art .labelInput {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.5rem;
+}
+
+.groupInput .labelInput {
+    align-items: end;
+}
+
+.groupTextarea .labelInput {
+    margin-top: 1rem;
+}
+
+.labelInput textarea {
+    border: 1px solid var(--shadow);
+    border-radius: 0.25rem;
+    opacity: 0.5;
+    resize: vertical;
+    min-height: 6rem;
+}
+
+.texArt .labelInput {
+    min-height: 8rem;
+}
+
 
 @media (min-width: 768px) {
     .cooking {

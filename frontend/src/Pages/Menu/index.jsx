@@ -12,11 +12,18 @@ function Menu () {
 
     return (
         <section className={styles.menu}>
+            <h2>Sistema de Cadastro</h2>
             <div className={styles.cards}>
+
+                {/* 
                 <Link to= "/editar-dados"><div className={styles.card}>Editar Dados</div>
                 </Link>
-                <Link to = "/entrega-residuos"><div className={styles.card}>Entrega de Resíduos</div></Link>
-                <Link to = "/dados-estacao-cadastro"><div className={styles.card}>Dados da Estação</div></Link>
+                 */}
+
+                <Link to = "/entrega-residuos"><div className={styles.card}>Resíduos</div></Link>
+                <Link to = "/dados-estacao-cadastro"><div className={styles.card}>Estação/Comunidade</div></Link>
+                <Link to = "/alimentacao-cadastro"><div className={styles.card}>Alimentação</div></Link>
+                <Link to = "/receita-cadastro"><div className={styles.card}>Receitas</div></Link>
                 <Link to = "/"><div className={styles.card}>Informações</div></Link>
             </div>
         </section>

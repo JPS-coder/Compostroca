@@ -8,7 +8,6 @@
 }
 
 .screenLoginRegister form {
-    width: 70vw;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -141,10 +140,6 @@ input::placeholder {
 }
 
 @media (min-width: 768px) {
-    .screenLoginRegister form {
-        width: 60vw;
-     }
-
      .screenLoginRegister .inputForm input{
         font-size: 1.5rem;
      }
