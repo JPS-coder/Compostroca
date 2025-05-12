@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import styles from "./LoginRegister.module.css";
 import { FaAt, FaLock } from 'react-icons/fa'
 import Reset from "../../Components/Reset";
+import axios from 'axios';
 
 function Login() {
     const [email, setEMail] = useState("");
@@ -13,18 +14,18 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
 
-       // simulacao tempo de resposta do servidor para teste em desenvolvimento
+       /*simulacao tempo de resposta do servidor para teste em desenvolvimento
        setTimeout(() => {
         console.log("Login bem-sucedido (simulação)");
         navigate("/menu");  // Redireciona para a página "home"
-    }, 1000);
-       /* try {
+    }, 1000);*/
+       try {
             const response = await axios.post("http://localhost:3000/auth/login", {email, password})
             console.log("Login bem-sucedido:", response.data);
             navigate("/home");
         } catch (error) {
             console.error("Erro no login", error.response?.data || error.message)
-        }*/
+        }
     };
     if (resetType) {
         return <Reset type={resetType} onCancel={() => setResetType(null)} />;

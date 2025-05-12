@@ -40,11 +40,13 @@ function Header() {
                 <nav
                 className={`${styles.menuSandwich} ${ showMenu ? styles.show : ''}`}
                 >
-                    <Link to="/Menu">Menu</Link> 
+                    <Link to="/Menu">Home</Link> 
                     <Link to="/" onClick={() => setShowMenu(false)}>Informaçôes</Link>
-                    <Link to="/editar-dados" onClick={() => setShowMenu(false)}>Editar Dados</Link>
-                    <Link to="/entrega-residuos" onClick={() => setShowMenu(false)}>Entrega de Resíduos</Link>
-                    <Link to="/dados-estacao-cadastro" onClick={() => setShowMenu(false)}>Dados da Estação</Link>    
+                    {/*<Link to="/editar-dados" onClick={() => setShowMenu(false)}>Editar Dados</Link>*/}
+                    <Link to="/alimentacao-cadastro" onClick={() => setShowMenu(false)}>Alimentação</Link>
+                    <Link to="/receita-cadastro" onClick={() => setShowMenu(false)}>Receitas</Link>
+                    <Link to="/entrega-residuos" onClick={() => setShowMenu(false)}>Resíduos</Link>
+                    <Link to="/dados-estacao-cadastro" onClick={() => setShowMenu(false)}>Estação/Comunidade</Link>    
                 </nav>
             </>
     )}

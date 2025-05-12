@@ -24,7 +24,7 @@ function AppRoutes() {
             <Routes>
                 <Route path='/' element={ <PageBase /> } >
                     <Route index element={ <Home /> } />
-                    <Route path="/login" element={ <Login/> } />
+                    <Route path="/admin" element={ <Login/> } />
                     <Route path="/cadastro" element={ <Register/> } />
                     <Route path="/cadastro-novo-usuario" element={ <RegisterNewUser/> } />
                     <Route path="/editar-dados" element={ <Edit/> } />
@@ -37,7 +37,7 @@ function AppRoutes() {
                     <Route path="/post/:id" element={<PostPage />} />
                     <Route path="/categoria/:categoryName" element={<CategoryPage />} />
                     <Route path="/dados-estacao/visualizar/:name" element={<View />} />
-                    <Route path="/receitas-cadastro" element={<RecipeRegister />} />
+                    <Route path="/receita-cadastro" element={<RecipeRegister />} />
                     <Route path="/alimentacao-cadastro" element={<Articles />} />
                     
                 </Route>
