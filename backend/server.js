@@ -34,6 +34,18 @@ const createTables = async () => {
             );
         `);
         console.log("Tabela 'station_data' verificada/criada com sucesso.");
+    
+        await pool.query(`
+            CREATE TABLE IF NOT EXISTS users (
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(255) NOT NULL,
+                email VARCHAR(255) UNIQUE NOT NULL,
+                password VARCHAR(255) NOT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+            `)
+            console.log("Tabela 'users' verificada/criada com sucesso.")
+
     } catch (err) {
         console.error("Erro ao criar tabela:", err);
     }
