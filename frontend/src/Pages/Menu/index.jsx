@@ -1,4 +1,4 @@
-import React,{ useState }from "react";
+import { useState }from "react";
 import { Link } from "react-router-dom";
 import styles from "./Menu.module.css";
 
@@ -24,7 +24,7 @@ function Menu () {
                 <Link to = "/dados-estacao-cadastro"><div className={styles.card}>Estação/Comunidade</div></Link>
                 <Link to = "/alimentacao-cadastro"><div className={styles.card}>Alimentação</div></Link>
                 <Link to = "/receita-cadastro"><div className={styles.card}>Receitas</div></Link>
-                <Link to = "/"><div className={styles.card}>Informações</div></Link>
+                <Link to = "/pagina-construcao"><div className={styles.card}>Informações</div></Link>
             </div>
         </section>
     )

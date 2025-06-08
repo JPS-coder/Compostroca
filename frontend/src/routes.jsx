@@ -16,6 +16,7 @@ import PostPage from "./Pages/Cooking/postPage"
 import View from "./Pages/StationData/view";
 import RecipeRegister from "./Pages/Cooking/recipeRegister";
 import Articles from "./Pages/Cooking/articles";
+import ConstPage from "./Pages/ConstPage";
 
 
 function AppRoutes() {
@@ -39,6 +40,7 @@ function AppRoutes() {
                     <Route path="/dados-estacao/visualizar/:name" element={<View />} />
                     <Route path="/receita-cadastro" element={<RecipeRegister />} />
                     <Route path="/alimentacao-cadastro" element={<Articles />} />
+                    <Route path="/pagina-construcao" element={<ConstPage />} />
                     
                 </Route>
             </Routes>

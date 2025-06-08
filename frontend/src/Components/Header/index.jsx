@@ -41,7 +41,7 @@ function Header() {
                 className={`${styles.menuSandwich} ${ showMenu ? styles.show : ''}`}
                 >
                     <Link to="/Menu">Home</Link> 
-                    <Link to="/" onClick={() => setShowMenu(false)}>Informaçôes</Link>
+                    {/*<Link to="/" onClick={() => setShowMenu(false)}>Informaçôes</Link>*/}
                     {/*<Link to="/editar-dados" onClick={() => setShowMenu(false)}>Editar Dados</Link>*/}
                     <Link to="/alimentacao-cadastro" onClick={() => setShowMenu(false)}>Alimentação</Link>
                     <Link to="/receita-cadastro" onClick={() => setShowMenu(false)}>Receitas</Link>
