@@ -51,7 +51,14 @@ const createTables = async () => {
     }
 };
 
-app.listen(3000, async () => {
+/*app.listen(3000, async () => {
     await createTables();
     console.log('Servidor rodando na porta 3000');
-})
+})*/
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, async () => {
+  await createTables();
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
