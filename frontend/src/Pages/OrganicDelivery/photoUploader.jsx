@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaCamera, FaImage } from 'react-icons/fa';
 import Messages from '../../Components/Messages';
 import styles from './OrganicDelivery.module.css';
+
 
 function PhotoUploader({ photos, setPhotos }) {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
@@ -83,5 +84,6 @@ function PhotoUploader({ photos, setPhotos }) {
     </div>
   );
 }
+
 
 export default PhotoUploader;

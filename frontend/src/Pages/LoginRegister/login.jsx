@@ -1,26 +1,21 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./LoginRegister.module.css";
 import { FaAt, FaLock } from 'react-icons/fa'
 import Reset from "../../Components/Reset";
 import axios from 'axios';
+import { useForm } from 'react-hook-form'
+
 
 function Login() {
-    const [email, setEMail] = useState("");
-    const [password, setPassword] = useState("");
+    const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
     const [resetType, setResetType] = useState(null);
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
+    const onSubmit = async (data) => {
 
-       /*simulacao tempo de resposta do servidor para teste em desenvolvimento
-       setTimeout(() => {
-        console.log("Login bem-sucedido (simulação)");
-        navigate("/menu");  // Redireciona para a página "home"
-    }, 1000);*/
        try {
-            const response = await axios.post("http://localhost:3000/auth/login", {email, password})
+            const response = await axios.post("http://localhost:3000/auth/login", data)
             console.log("Login bem-sucedido:", response.data);
             navigate("/home");
         } catch (error) {
@@ -34,16 +29,15 @@ function Login() {
     return (
         <div className={styles.screenLoginRegister}>
             <h2>Entrar</h2>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <div className={styles.inputForm}>
                     <FaAt className={styles.icon} />
                     <input
-                     type="email"
-                     value={email} 
-                     onChange={(e) => setEMail(e.target.value)}
+                     type="email" 
                      placeholder= 'Digite seu e-mail'
-                     required
+                     {...register("email", { required: true })}
                     />
+                    
                 </div>
 
                 <div className={styles.inputForm}>
@@ -51,11 +45,10 @@ function Login() {
                     <FaLock className={styles.icon} />
                     <input 
                         type="password" 
-                        value={password} 
-                        onChange={(e) => setPassword(e. target.value)} 
                         placeholder="Digite sua senha"
-                        required
+                        {...register("password", { required: true })}  
                     />
+                   
                 </div>
                 <div className={styles.paragraph}>
                     <button

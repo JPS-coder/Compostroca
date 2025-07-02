@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import styles from './LoginRegister.module.css';
 import Messages from '../../Components/Messages';
+import { useForm } from 'react-hook-form';
 
 
 function Register() {
-    const [name, setName] = useState("");
-    const [address, setAddress] = useState("");
-    const [phone, setPhone] = useState("");
-    const [message, setMessage] = useState(null)
-    const [type, setType] = useState(null)
+    const { register, handleSubmit, reset } = useForm();
+    const [message, setMessage] = useState(null);
+    const [type, setType] = useState(null);
+    const [redirectTo, setRedirectTo] = useState(null);
+    const [modalVisible, setModalVisible] = useState(false);
 
+    const onSubmit = async (data) => {
+        console.log(data)
 
-    const handleRegister = async (e) => {
-        e.preventDefault();
 
         setMessage(
             <>
@@ -22,6 +23,8 @@ function Register() {
         setType('success');
         setRedirectTo('/menu');
         setModalVisible(true);
+
+        reset();
     }
 
     
@@ -37,16 +40,15 @@ function Register() {
 
             <h2 className={styles.title}>Cadastro</h2>
             
-            <form onSubmit={handleRegister}>
+            <form onSubmit={handleSubmit(onSubmit)}> 
                 <div className={styles.inputForm}>
                     <div className={styles.labelInput}>
                         <label>Nome:</label>
                         <input
                             type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            required
+                            {...register("name", { required: true })}  
                         />
+                     
                     </div>
                 
                 </div>
@@ -55,10 +57,9 @@ function Register() {
                         <label>Telefone:</label>
                         <input
                             type="tel"
-                            value={phone}
-                            onChange={(e) => setPhone(e. target.value)}
-                            required
+                            {...register("phone", { required: true })}
                         />
+                    
                     </div>
                     
                 </div>
@@ -68,15 +69,13 @@ function Register() {
                         <label>Endereço:</label>
                         <input
                             type="text"
-                            value={address}
-                            onChange={(e) => setAddress(e. target.value)}
-                            required
+                            {...register("address", { required: true })}
                         />
+
                     </div>
                        
                 </div>
 
-                
 
                 <button className={styles.cad} type='submit'>Enviar</button>
             </form>

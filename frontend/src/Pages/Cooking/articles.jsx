@@ -1,37 +1,36 @@
-import React, { useState } from 'react';
 import styles from './Cooking.module.css';
+import { useForm } from 'react-hook-form';
 
 function Articles() {
-    const [titleArticle, setTitleArticle] = useState('');
-    const [subtitle, setSubtitle] = useState('');
-    const [text, setText] = useState('');
-
-    const handleArticleSubmit = async (e) => {
-        e.preventdefault();
+    const { register, handleSubmit, reset } = useForm ();
     
-    }
+    const onSubmit = async (data) => {
+        console.log(data);
+        reset();
+    };
+
     return (
         <section className={styles.cooking}>
             <h2>Artigos</h2>
-            <form onSubmit={handleArticleSubmit}>
+            <form onSubmit={handleSubmit(onSubmit)}> 
                 <div className={`${styles.inputForm} ${styles.art} ${styles.groupInput}`}>
                     <div className={styles.labelInput}>
                         <label>Título do artigo:</label>
-                        <input type="text" value={titleArticle} onChange={(e) => setTitleArticle(e.target.value)}/>
+                        <input type="text" {...register("titleArticle")}/>
                     </div>
                 </div>
 
                 <div className={`${styles.inputForm} ${styles.art} ${styles.groupInput}`}>
                     <div className={styles.labelInput}>
                         <label>Subtítulo:</label>
-                        <input type="text" value={subtitle} onChange={(e) => setSubtitle(e.target.value)}/>
-                    </div>
+                        <input type="text" {...register("subtitle")}/> 
+                        </div>
                 </div> 
 
                 <div className={`${styles.inputForm} ${styles.art} ${styles.textArt}`}>
                     <div className={styles.labelInput}>
                         <label>Texto:</label>
-                        <textarea type="textarea" value={text} onChange={(e) => setText(e.target.value)} />
+                        <textarea  {...register("text")} /> 
                     </div>
                 </div>
 
@@ -39,6 +38,6 @@ function Articles() {
             </form>
         </section>
     )
-}
 
+}
 export default Articles;

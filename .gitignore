@@ -13,10 +13,12 @@ dist-ssr
 *.local
 
 
+frontend/ModificatedFiles
 
 
 backend/.env
 backend/routes/authcopy.js
+
 
 
 # Editor directories and files

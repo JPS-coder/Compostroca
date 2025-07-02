@@ -5,7 +5,6 @@ import ViewStationData from './viewStationData';
 
 function View() {
     const { name } = useParams();
-
     const [dataStation, setDataStation] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

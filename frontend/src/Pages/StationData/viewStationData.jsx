@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './StationData.module.css';
 
 
@@ -43,5 +42,6 @@ function ViewStationData({ data }) {
     </div>
   );
 }
+
 
 export default ViewStationData;

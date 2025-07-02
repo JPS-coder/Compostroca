@@ -1,30 +1,27 @@
 import { useState } from "react";
 import styles from './LoginRegister.module.css';
 import Messages from "../../Components/Messages";
+import { useForm } from "react-hook-form"
 
 function Edit() {
-    const [name, setName] = useState("");
-    const [address, setAddress] = useState("");
-    const [phone, setPhone] = useState("");
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const { register, handleSubmit, reset } = useForm();
+
     const [message, setMessage] = useState(null)
     const [type, setType] = useState(null)
     const [showMessage, setShowMessage] = useState(false)
 
-    const handleEdit = async (e) => {
-        e.preventDefault();
-
-        // simular tempo de resposta do servidor para teste em desenvolvimento
+    const onSubmit = async(data) => {
+        console.log(data);
         setMessage(
             <>
                 Dados salvos <br/>com sucesso.
             </>)
         setType('success');
         setShowMessage(true);
-        
-    }
+        reset();
+    };
 
+    
     
     return (
         <div className={`${styles.screenLoginRegister} ${styles.cad} ${styles.edit}`}>
@@ -36,17 +33,14 @@ function Edit() {
                 }}
             />
             <h2 className={styles.title}>Editar Dados</h2>
-            <form onSubmit={handleEdit}>
+            <form onSubmit={handleSubmit(onSubmit)}> 
                 <div className={styles.inputForm}>
                     <div className={styles.labelInput}>
                         <label>
                             Nome:
                         </label>
-                        <input
-                            type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}                         
-                        />
+                        <input type="text" {...register("name")} />
+                
                     </div>
                    
                 </div>
@@ -57,13 +51,9 @@ function Edit() {
                                 Endereço:
                             </label>
                             <input
-                                type="text"
-                                value={address}
-                                onChange={(e) => setAddress(e. target.value)}
-                                
-                            />
-                        </div>
-                       
+                                type="text" {...register("address")}/>
+                                                        
+                        </div>       
                 </div>
 
                 <div className={styles.inputForm}>
@@ -72,25 +62,19 @@ function Edit() {
                             Telefone:
                         </label>
                         <input
-                            type="tel"
-                            value={phone}
-                            onChange={(e) => setPhone(e. target.value)}
+                            type="tel"{...register("phone")} />
                             
-                        />
                     </div>
-                    
                 </div>
+
                 <div className={styles.inputForm}>
                         <div className={styles.labelInput}>
                             <label>
                                 Email:
                             </label>
                             <input
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e. target.value)}
+                                type="email" {...register("email")}/>
                                 
-                            />
                         </div>
                        
                 </div>
@@ -100,11 +84,7 @@ function Edit() {
                                 Senha:
                             </label>
                             <input
-                                type="text"
-                                value={password}
-                                onChange={(e) => setPassword(e. target.value)}
-                                
-                            />
+                                type="text" {...register("password")}/>
                         </div>
                        
                 </div>

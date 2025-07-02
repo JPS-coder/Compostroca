@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './LoginRegister.module.css';
 import { FaAt, FaLock } from 'react-icons/fa';
@@ -6,17 +7,18 @@ import Messages from '../../Components/Messages';
 
 
 function RegisterNewUser() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfrimPassword] = useState("");
+    const { register, handleSubmit } = useForm();
     const [errorMessage, setErrorMessage] = useState('');
     const [showMessage, setShowMessage] = useState(false)
     const navigate = useNavigate();
     const [message, setMessage] = useState(null);
     const [type, setType] = useState(null)
+     const [redirectTo, setRedirectTo] = useState(null);
+    const [modalVisible, setModalVisible] = useState(false);
 
-    const handleRegisterNewUser = async (e) => {
-        e.preventDefault();
+
+      const onSubmit = async(data) => {
+        console.log(data)
 
             setMessage(
                 <>
@@ -32,7 +34,7 @@ function RegisterNewUser() {
     
 
     return (
-        <div className={styles.screenLoginRegister}>
+        <div className={styles.screenLoginRegister}> 
             <Messages
                 message={message}
                 type={type}
@@ -40,38 +42,33 @@ function RegisterNewUser() {
                 extraMessage={<>Obrigado por se <br /> juntar à </>}
             />
             <h2>Novo Usuário</h2>
-            <form onSubmit={handleRegisterNewUser}>
+            <form onSubmit={handleSubmit(onSubmit)}> 
                 <div className={styles.inputForm}>
                     <FaAt className={styles.icon} />
                     <input
                         type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder='Digite seu email'
-                        required
-                    />
-                </div>
-
-                <div className={styles.inputForm}>
-                    <FaLock className={styles.icon} />
-                        <input 
-                            type="password" 
-                            value={password} 
-                            onChange={(e) => setPassword(e. target.value)} 
-                            placeholder="Digite sua senha"
-                            required
+                        {...register("email", { required: true })}
                         />
+                        
                 </div>
 
                 <div className={styles.inputForm}>
                     <FaLock className={styles.icon} />
                         <input 
                             type="password" 
-                            value={confirmPassword} 
-                            onChange={(e) => setConfrimPassword(e. target.value)} 
+                            {...register("password", { required: true })}
+                            />
+
+                </div>
+
+                <div className={styles.inputForm}>
+                    <FaLock className={styles.icon} />
+                        <input 
+                            type="password"
                             placeholder="Repita a senha"
-                            required
-                        />
+                            {...register("confirmPassword", { required: true })}
+                            />
+                        
                 </div>
                 {errorMessage && <p className={styles.msg}>{errorMessage}</p>}
                 
